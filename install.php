@@ -1,6 +1,6 @@
 <?php
 
-rex_sql_table::get(rex::getTable('yform_spam_protection_frequency'))
+rex_sql_table::get(rex::getTable('tmp_yform_spam_protection_frequency'))
     ->ensureColumn(new rex_sql_column('ipv4', 'int(10) unsigned', true))
     ->ensureColumn(new rex_sql_column('ipv6', 'varbinary(16)', true))
     ->ensureColumn(new rex_sql_column('createdate', 'datetime', false, null, 'on update CURRENT_TIMESTAMP'))
