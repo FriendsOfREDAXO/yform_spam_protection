@@ -1,0 +1,18 @@
+package: yform_spam_protection
+version: '1.0'
+author: 'Alexander Walther'
+supportpage: https://github.com/alexplusde/yform_spam_protection
+
+requires:
+    packages:
+        yform/manager: '>=3,<4'
+
+page:
+    hidden: true
+
+pages:
+    yform/spam_protection:
+        title: 'Spamschutz'
+
+default_config:
+    timer: 5
