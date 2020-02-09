@@ -4,8 +4,10 @@ author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/yform_spam_protection
 
 requires:
-    packages:
-        yform/manager: '>=3,<4'
+    redaxo: ^5.8.1
+    yform: '>=3,<4'
+    php:
+        version: ^7.0
 
 page:
     hidden: true
