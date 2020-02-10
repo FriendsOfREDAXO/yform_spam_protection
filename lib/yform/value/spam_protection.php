@@ -1,6 +1,6 @@
 <?php
 
-class rex_tmp_yform_value_spam_protection extends rex_tmp_yform_value_abstract
+class rex_yform_value_spam_protection extends rex_tmp_yform_value_abstract
 {
     public function postValidateAction()
     {
