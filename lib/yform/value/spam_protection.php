@@ -9,6 +9,7 @@ class rex_tmp_yform_value_spam_protection extends rex_tmp_yform_value_abstract
         $debug = (int)$this->getElement(4);
         $session_timestamp = rex_request::session('spamfilter');
         $form_timestamp = rex_request($this->getFieldId()."_microtime", 'int', false);
+        $js_enabled = rex_request($this->getFieldId()."_js_enabled", 'int', false);
 
         $ipv4 = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4);
         $ipv6 = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
@@ -28,7 +29,7 @@ class rex_tmp_yform_value_spam_protection extends rex_tmp_yform_value_abstract
                 $log[] = "honeypot wurde ausgefüllt: ".rex_request($this->getFieldId());
             }
 
-            if(rex_config::get('yform_spam_protection', 'ip_block_limit') > $count) {
+            if (rex_config::get('yform_spam_protection', 'ip_block_limit') > $count) {
                 rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 1)", [':ipv4'=>$ipv4, ':ipv6'=>$ipv6]);
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
