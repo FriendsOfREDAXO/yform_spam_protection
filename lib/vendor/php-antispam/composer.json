@@ -1,0 +1,18 @@
+{
+    "name": "cleantalk/php-antispam",
+    "description": "PHP API for antispam service cleantalk.org. Invisible protection from spam, no captches, no puzzles, no animals and no math.",
+    "license": "GPL-3.0",
+    "support": {
+        "email": "welcome@cleantalk.org"
+    },
+    "homepage": "http://cleantalk.org",
+    "keywords": ["spam", "anti-spam", "antispam", "api"],
+    "autoload": {
+        "psr-4": {
+            "lib\\": "lib"
+        },
+        "files": [
+            "lib/cleantalk-php-patch.php"
+        ]
+    }
+}

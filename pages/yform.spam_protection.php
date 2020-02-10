@@ -34,6 +34,20 @@ if (rex::getUser()->isAdmin()) {
     $select->addOption("aktivieren", 1);
     $select->addOption("deaktivieren", 0);
 
+    $form->addFieldset("CleanTalk.org");
+
+    $field = $form->addSelectField('cleantalk');
+    $field->setLabel("Cleantalk");
+    $field->setNotice("");
+    $select = $field->getSelect();
+    $select->setSize(1);
+    $select->addOption("aktivieren", 1);
+    $select->addOption("deaktivieren", 0);
+
+    $field = $form->addReadOnlyTextField('cleantalk_api_key');
+    $field->setLabel('API-Schlüssel');
+    $field->setNotice("Kostenpflichtiger Account erforderlich: https://cleantalk.org/. DSGVO beachten - es werden personenbezogene Daten übertragen.");
+
     $form->addFieldset("Erweiterte Einstellungen");
 
     $field = $form->addReadOnlyTextField('notification_email');
