@@ -35,7 +35,7 @@ rex_sql_table::get(rex::getTable('tmp_yform_spam_protection_frequency'))
         $this->setConfig('ip_block', 10);
     }
     if (!$this->hasConfig("ip_block_timer")) {
-        $this->setConfig('ip_block', 300);
+        $this->setConfig('ip_block_timer', 300);
     }
     
     if (!$this->hasConfig("geo_block")) {
