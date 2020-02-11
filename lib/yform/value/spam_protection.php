@@ -29,7 +29,7 @@ class rex_tmp_yform_value_spam_protection extends rex_tmp_yform_value_abstract
                 $log[] = "honeypot wurde ausgefüllt: ".rex_request($this->getFieldId());
             }
 
-            if (rex_config::get('yform_spam_protection', 'ip_block_limit') > $count) {
+            if (rex_config::get('yform_spam_protection', 'ip_block_limit') < $count) {
                 rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 1)", [':ipv4'=>$ipv4, ':ipv6'=>$ipv6]);
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);

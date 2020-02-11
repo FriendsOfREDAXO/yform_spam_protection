@@ -44,10 +44,14 @@ if (rex::getUser()->isAdmin()) {
     $select->addOption("aktivieren", 1);
     $select->addOption("deaktivieren", 0);
 
-    $field = $form->addReadOnlyTextField('cleantalk_api_key');
-    $field->setLabel('API-Schlüssel');
+    $field = $form->addReadOnlyTextField('cleantalk_check_message_api_key');
+    $field->setLabel('API-Schlüssel (check_message)');
     $field->setNotice("Kostenpflichtiger Account erforderlich: https://cleantalk.org/. DSGVO beachten - es werden personenbezogene Daten übertragen.");
 
+        $field = $form->addReadOnlyTextField('cleantalk_spam_check_api_key');
+        $field->setLabel('API-Schlüssel (spam_check)');
+        $field->setNotice("Kostenpflichtiger Account erforderlich: https://cleantalk.org/. DSGVO beachten - es werden personenbezogene Daten übertragen.");
+    
     $form->addFieldset("Erweiterte Einstellungen");
 
     $field = $form->addReadOnlyTextField('notification_email');
