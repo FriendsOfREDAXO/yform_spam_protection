@@ -1,6 +1,6 @@
 # Spamschutz für REDAXO 5 YForm 3.x
 
-Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverlässig Spam und Bots abzuwehren. Die Einrichtung ist in weniger als 5 Minuten erledigt.
+Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverlässig **Spam und Bots abzuwehren**. Die Einrichtung ist in **weniger als 5 Minuten** erledigt.
 
 ## Features
 
