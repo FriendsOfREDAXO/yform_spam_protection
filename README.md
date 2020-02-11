@@ -1,10 +1,11 @@
 # Spamschutz für REDAXO 5 YForm 3.x
 
-Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverlässig Spam und Bots abzuwehren.
+Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverlässig Spam und Bots abzuwehren. Die Einrichtung ist in weniger als 5 Minuten erledigt.
 
 ## Features
 
-* **Bestmögliche Usability** – keine zusätzlichen Eingaben vom Benutzer notwendig 
+* **Einfache Integration** - nur eine Zeile Code in das YForm-Formular einfügen.
+* **Bestmögliche Usability** – keine zusätzlichen Eingaben vom Benutzer notwendig. 
 * **Barrierefrei** – ohne Rechenaufgabe oder Bild-Captcha. 
 * **DSGVO-konform** – sofern keine Konfiguration mit externen Anbietern gewählt wird.
 * **Mehrsprachig** - Die Fehlermeldung kann je Sprache durch Addons wie Sprog oder XOutputFilter angepasst werden.
@@ -15,7 +16,7 @@ Weitere geplante Features unter https://github.com/alexplusde/yform_spam_protect
 
 * Im REDAXO-Backend unter `Installer` abrufen und
 * anschließend unter `Hauptmenü` > `AddOns` installieren.
-* Den gewünschten YForm-Formularen das Feld `Spamschutz` hinzufügen:
+* Den gewünschten YForm-Formularen das Feld `spam_protection` hinzufügen:
 
 **PHP-Schreibweise**
 ```php
