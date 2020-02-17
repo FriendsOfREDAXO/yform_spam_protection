@@ -1,5 +1,5 @@
 package: yform_spam_protection
-version: '1.0.5'
+version: '1.0.5-dev'
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/yform_spam_protection
 
