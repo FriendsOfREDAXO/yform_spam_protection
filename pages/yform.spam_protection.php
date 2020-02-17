@@ -6,77 +6,87 @@ echo \rex_view::title(\rex_i18n::msg('yform'));
 if (rex::getUser()->isAdmin()) {
     $form = rex_config_form::factory($this->getProperty('package'));
 
-    $form->addFieldset("Einstellungen");
+    $form->addFieldset($this->i18n('settings'));
 
     $field = $form->addTextField('warning');
-    $field->setLabel('Fehlermeldung');
-    $field->setNotice("Fehlermeldung, die die Validierung ausgeben soll. Kann mit dem Addon Sprog oder XOutputFilter mehrsprachig übersetzt werden.");
-
+    $field->setLabel($this->i18n('error_message'));
+    $field->setNotice($this->i18n('error_notice'));
+    $field->setAttribute(disabled, true);
+    
+    $form->addFieldset($this->i18n('checks'));
+    
     $field = $form->addSelectField('timer');
-    $field->setLabel("Timer");
+    $field->setLabel($this->i18n('timer'));
     $select = $field->getSelect();
     $select->setSize(1);
-    $select->addOption("aktivieren", 1);
-    $select->addOption("deaktivieren", 0);
-
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+    $field->setAttribute(disabled, true);
+    
     $field = $form->addSelectField('honeypot');
-    $field->setLabel("Honeypot");
+    $field->setLabel($this->i18n('honeypot'));
     $select = $field->getSelect();
     $select->setSize(1);
-    $select->addOption("aktivieren", 1);
-    $select->addOption("deaktivieren", 0);
-
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+    $field->setAttribute(disabled, true);
+    
     $field = $form->addSelectField('ip_block');
-    $field->setLabel("dynamische IP-Sperre");
-    $field->setNotice("Sollten zu viele Formulare über diese IP-Adresse versendet werden, wird die IP für eine bestimmte Zeit geblockt.");
+    $field->setLabel($this->i18n('block_ip_dyn'));
+    $field->setNotice($this->i18n('block_ip_dyn_notice'));
     $select = $field->getSelect();
     $select->setSize(1);
-    $select->addOption("aktivieren", 1);
-    $select->addOption("deaktivieren", 0);
-
-    $form->addFieldset("Erweiterte Einstellungen");
-
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+    $field->setAttribute(disabled, true);
+    
+    $form->addFieldset($this->i18n('advanced_settings'));
+    
     $field = $form->addReadOnlyTextField('notification_email');
-    $field->setLabel('E-Mail-Adresse');
-    $field->setNotice("Adresse, die bei erhöhtem Spam-Aufkommen benachrichtigt wird.");
+    $field->setLabel($this->i18n('email'));
+    $field->setNotice($this->i18n('email_notice'));
+    $field->setAttribute(disabled, true);
 
     $field = $form->addTextField('timer_session');
-    $field->setLabel('Timer 1');
-    $field->setNotice("Anzahl der Sekunden, die mind. für die Bearbeitung oder Korrektur eines Formulars benötigt werden.");
+    $field->setLabel($this->i18n('timer_1'));
+    $field->setNotice($this->i18n('timer_1_notice'));
 
     $field = $form->addTextField('timer_form');
-    $field->setLabel('Timer 2');
-    $field->setNotice("Anzahl der Sekunden, die mind. seit dem 1. Aufruf eines Formulars vergehen muss.");
+    $field->setLabel($this->i18n('timer_2'));
+    $field->setNotice($this->i18n('timer_2_notice'));
 
     $field = $form->addTextField('ip_block_limit');
-    $field->setLabel('IP-Sperren-Limit');
-    $field->setNotice("Anzahl, die im IP-Sperren-Zeitfenster überschritten werden muss, z.B. <code>10</code> pro Zeitfenster");
+    $field->setLabel($this->i18n('timer_block_limit'));
+    $field->setNotice($this->i18n('timer_block_limit_notice'));
 
     $field = $form->addTextField('ip_block_timer');
-    $field->setLabel('IP-Sperren-Zeitfenster');
-    $field->setNotice("In Sekunden, in denen das Anfrage-Limit überschritten werden muss, z.B. <code>600</code> für 10 Minuten.");
+    $field->setLabel($this->i18n('timer_block_limit_window'));
+    $field->setNotice($this->i18n('timer_block_limit_window_notice'));
 
     $field = $form->addSelectField('geo_block');
-    $field->setLabel("GeoIP-Sperre");
+    $field->setLabel($this->i18n('geoip'));
     $select = $field->getSelect();
     $select->setSize(1);
-    $select->addOption("aktivieren", 1);
-    $select->addOption("deaktivieren", 0);
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+    $field->setAttribute(disabled, true);
 
     $field = $form->addSelectField('tld_block');
-    $field->setLabel("IP-Sperre");
+    $field->setLabel($this->i18n('tld_block'));
     $select = $field->getSelect();
     $select->setSize(1);
-    $select->addOption("aktivieren", 1);
-    $select->addOption("deaktivieren", 0);
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+    $field->setAttribute(disabled, true);
     
     $field = $form->addTextField('tld_list');
-    $field->setLabel('Top-Level-Domains');
-    $field->setNotice("Top-Level-Domains, an die kein Versand erfolgen soll, bspw. <code>.ru</code>");
+    $field->setLabel($this->i18n('tld_list'));
+    $field->setNotice($this->i18n('tld_list_notice'));
+    $field->setAttribute(disabled, true);
 
     $fragment = new rex_fragment();
     $fragment->setVar('class', 'edit', false);
-    $fragment->setVar('title', "Schaltflächen zur Datenschutzerklärung", false);
+    $fragment->setVar('title', $this->i18n('title'), false);
     $fragment->setVar('body', $form->get(), false);
     echo $fragment->parse('core/page/section.php');
 }
