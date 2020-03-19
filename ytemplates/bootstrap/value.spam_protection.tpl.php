@@ -14,7 +14,11 @@
         [id="<?=$this->getHTMLId() ?>"] {
             overflow: hidden;
             height: 1px;
-            opacity: 100%;
+            opacity: 1;
+        }
+        [id="<?=$this->getHTMLId() ?>"] input {
+            background-color: transparent;
+            border: 0;
         }
     </style>
     <script type="text/javascript">
