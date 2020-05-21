@@ -1,13 +1,13 @@
 package: yform_spam_protection
 version: '1.0.5-dev'
-author: 'Alexander Walther'
-supportpage: https://github.com/alexplusde/yform_spam_protection
+author: 'Alexander Walther, FriendsOfREDAXO'
+supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 
 requires:
-    redaxo: ^5.8.1
+    redaxo: ^5.9
     yform: '>=3,<4'
     php:
-        version: ^7.0
+        version: ^7.1
 
 page:
     hidden: true
