@@ -10,7 +10,7 @@ Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverl�
 * **DSGVO-konform** – sofern keine Konfiguration mit externen Anbietern gewählt wird.
 * **Mehrsprachig** - Die Fehlermeldung kann je Sprache durch Addons wie Sprog oder XOutputFilter angepasst werden.
 
-Weitere geplante Features unter https://friendsofredaxo.github.io/yform_spam_protection/issues
+Weitere geplante Features unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues)
 
 ## Installation
 
@@ -75,7 +75,7 @@ Bei Formularen mit Eingabe einer Nachricht, bspw. einem Kontaktformular, können
 
 * Im REDAXO-Backend unter `YForm` > `Spamschutz` optional Einstellungen vornehmen.
 
-Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Umsetzung unter https://friendsofredaxo.github.io/yform_spam_protection/issues oder unterstütze den Autor finanziell für die Weiterentwicklung und Wartung: https://github.com/sponsors/alexplusde
+Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Umsetzung unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues) oder unterstütze den Initiator finanziell für die Weiterentwicklung und Wartung: [https://github.com/sponsors/alexplusde](https://github.com/sponsors/alexplusde)
 
 ## Tipps und Tricks
 
@@ -87,4 +87,4 @@ Der 4. Parameter am Feld aktiviert den Debug-Modus
 
 ## Autor
 
-* @alexplusde
+* [@alexplusde](https://github.com/sponsors/alexplusde) (Initiator)
