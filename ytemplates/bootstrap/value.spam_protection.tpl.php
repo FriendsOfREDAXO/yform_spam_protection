@@ -17,8 +17,8 @@
             opacity: 1;
         }
         [id="<?=$this->getHTMLId() ?>"] input {
-            background-color: transparent !important; 
-			border-color:transparent !important;
+		background-color: transparent !important; 
+		border-color:transparent !important;
         }
     </style>
     <script type="text/javascript">
