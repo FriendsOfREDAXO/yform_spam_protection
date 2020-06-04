@@ -7,7 +7,8 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
         rex_login::startSession();
 
         $debug = (int)$this->getElement(4);
-        $session_timestamp = rex_request::session('spamfilter');
+        $session_timestamp_key = "spamfilter".$this->params["form_name"];
+        $session_timestamp = rex_request::session($session_timestamp_key);
         $form_timestamp = rex_request($this->getFieldId()."_microtime", 'int', false);
         $js_enabled = rex_request($this->getFieldId()."_js_enabled", 'int', false);
 
@@ -57,7 +58,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
             dump($log);
         }
 
-        rex_request::setSession('spamfilter', microtime(true));
+        rex_request::setSession($session_timestamp_key, microtime(true));
     }
 
     public function enterObject()
