@@ -15,6 +15,7 @@
             overflow: hidden;
             height: 1px;
             opacity: 1;
+	    padding-top: 1px;
         }
         [id="<?=$this->getHTMLId() ?>"] input {
 		background-color: transparent; 
