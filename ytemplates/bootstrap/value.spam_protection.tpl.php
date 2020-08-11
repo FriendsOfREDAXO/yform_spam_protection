@@ -12,15 +12,16 @@
         value="0" readonly="readonly" tabindex="-1">
     <style>
         [id="<?=$this->getHTMLId() ?>"] {
-            overflow: hidden;
-            height: 1px;
-            opacity: 1;
-	    padding-top: 1px;
-        }
-        [id="<?=$this->getHTMLId() ?>"] input {
-		background-color: transparent; 
-		border-color: transparent;
-        }
+ 		position: absolute !important;
+		width: 1px !important;
+		height: 1px !important;
+		padding: 0 !important;
+		margin: -1px !important;
+		overflow: hidden !important;
+		clip: rect(0, 0, 0, 0) !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	    }
     </style>
     <script type="text/javascript">
         var date = new Date();
