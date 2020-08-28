@@ -43,6 +43,8 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
                 $log[] = "session-microtime nicht eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
+            } else {
+                $log[] = "session-microtime eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
             }
 
             if (($form_timestamp + rex_config::get('yform_spam_protection', 'timer_form')) > microtime(true)) {
@@ -50,7 +52,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
                 $log[] = "formular-microtime nicht eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
             } else {
-                $log[] = "formular-microtime eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer')." > ".microtime(true);
+                $log[] = "formular-microtime eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
             }
         }
 
