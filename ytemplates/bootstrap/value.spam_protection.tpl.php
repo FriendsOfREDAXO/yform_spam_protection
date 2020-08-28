@@ -11,7 +11,7 @@
         name="<?= $this->getFieldId() ?>_js_enabled" type="hidden"
         value="0" readonly="readonly" tabindex="-1">
     <style>
-        [id="<?=$this->getHTMLId() ?>"] {
+        [id="<?= $this->getHTMLId() ?>"] {
  		position: absolute !important;
 		width: 1px !important;
 		height: 1px !important;
