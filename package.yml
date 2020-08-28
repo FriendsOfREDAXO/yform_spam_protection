@@ -4,10 +4,11 @@ author: 'Alexander Walther, FriendsOfREDAXO'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 
 requires:
-    redaxo: ^5.9
-    yform: '>=3,<4'
+    redaxo: '^5.9'
+    packages:
+        yform: '^3'
     php:
-        version: ^7.1
+        version: '^7.1'
 
 page:
     hidden: true
@@ -20,6 +21,6 @@ pages:
                 title: 'Einstellungen'
             docs:
                 title: 'Dokumentation'
-            
+
 default_config:
     timer: 5
