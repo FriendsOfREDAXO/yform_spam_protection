@@ -18,11 +18,11 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
         if ($debug) {
             rex_sql::factory()->setDebug($debug)->setQuery("DELETE FROM rex_tmp_yform_spam_protection_frequency  WHERE createdate < (NOW() - INTERVAL ".rex_config::get('yform_spam_protection', 'ip_block_timer')." SECOND)");
         }
-        
+
         $count = rex_sql::factory()->setDebug($debug)->getArray("SELECT count(`createdate`) AS `count` FROM rex_tmp_yform_spam_protection_frequency WHERE `ipv4` = INET_ATON(:ipv4) AND `ipv6` = :ipv6", [':ipv4' => $ipv4, ':ipv6' => $ipv6])[0]['count'];
 
         $log = [];
-        
+
         if ($this->params['send'] == 1) {
             if (rex_request($this->getFieldId()) != "") {
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
@@ -43,6 +43,8 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
                 $log[] = "session-microtime nicht eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
+            } else {
+                $log[] = "session-microtime eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
             }
 
             if (($form_timestamp + rex_config::get('yform_spam_protection', 'timer_form')) > microtime(true)) {
@@ -50,7 +52,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                 $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
                 $log[] = "formular-microtime nicht eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
             } else {
-                $log[] = "formular-microtime eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer')." > ".microtime(true);
+                $log[] = "formular-microtime eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
             }
         }
 
