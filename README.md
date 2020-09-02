@@ -76,7 +76,7 @@ Bei Formularen mit Eingabe einer Nachricht, bspw. einem Kontaktformular, können
 * Im REDAXO-Backend unter `YForm` > `Spamschutz` optional Einstellungen vornehmen.
 
 ## Achtung
-Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Umsetzung unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues) oder unterstütze den Initiator finanziell für die Weiterentwicklung und Wartung: [https://github.com/sponsors/alexplusde](https://github.com/sponsors/alexplusde)
+Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Umsetzung unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues)
 
 ## Tipps und Tricks
 
