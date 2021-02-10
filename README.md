@@ -28,7 +28,7 @@ Weitere geplante Features unter [https://github.com/FriendsOfREDAXO/yform_spam_p
 spam_protection|honeypot|Bitte nicht ausfüllen|Ihre Anfrage wurde als Spam erkannt und gelöscht. Bitte versuchen Sie es in einigen Minuten erneut oder wenden Sie sich persönlich an uns.|0
 ```
 
-> Hinweis: Bei der Installation wird folgende Datenbanktabelle erstellt: `rex_yform_spam_protection_frequency`. Diese beinhaltet die IP-Adresse des Besuchers und löscht diese nach Ablauf eines in den Einstellungen festgelegten Zeitraums.
+> Hinweis: Bei der Installation wird folgende Datenbanktabelle erstellt: `rex_tmp_yform_spam_protection_frequency`. Diese beinhaltet die IP-Adresse des Besuchers und löscht diese nach Ablauf eines in den Einstellungen festgelegten Zeitraums.
 
 ## Funktionsweise
 
@@ -67,7 +67,7 @@ Bei Formularen mit Eingabe der E-Mail-Adresse, bspw. einem Kontaktformular, kön
 
 ### Sprach-Sperre (geplant)
 
-Bei Formularen mit Eingabe einer Nachricht, bspw. einem Kontaktformular, können Absender gesperrt werden, die sich in einer unerwartetten Sprache melden: Bspw. `englisch`, wenn die Firma nur eine deutschsprachige Website betreibt, oder `russisch`, obwohl die Website sich nicht an Besucher au0erhalb der EU richtet. 
+Bei Formularen mit Eingabe einer Nachricht, bspw. einem Kontaktformular, können Absender gesperrt werden, die sich in einer unerwartetten Sprache melden: Bspw. `englisch`, wenn die Firma nur eine deutschsprachige Website betreibt, oder `russisch`, obwohl die Website sich nicht an Besucher außerhalb der EU richtet. 
 
 > Hinweis:  Es ist jedoch nicht auszuschließen, dass Kontakte im Ausland dadurch versehentlich ausgesperrt werden. Diese Option sollte nur in Ausnahmefällen aktiviert werden.
 
