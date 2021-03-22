@@ -8,7 +8,7 @@ requires:
     packages:
         yform: '^3'
     php:
-        version: '^7.1'
+        version: '>=7.1'
 
 page:
     hidden: true
