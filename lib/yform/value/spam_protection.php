@@ -8,7 +8,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
 
         $debug = (int)$this->getElement(4);
         $session_timestamp_key = "spamfilter".$this->params["form_name"];
-        $session_timestamp = rex_request::session($session_timestamp_key);
+        $session_timestamp = rex_request::session($session_timestamp_key, 'int', 0);
         $form_timestamp = rex_request($this->getFieldId()."_microtime", 'int', false);
         $js_enabled = rex_request($this->getFieldId()."_js_enabled", 'int', false);
 
