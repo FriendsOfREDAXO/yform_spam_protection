@@ -1,5 +1,15 @@
-Changelog
-=========
+#Changelog - yform spam protetion
+
+##[1.0.6] - 2021-03-28
+
+###Bugfix
+* AddOn jetzt auch mit PHP 8.x installierbar @ritzfritz
+* `$session_timestamp` ist jetzt int - Warning wurde damit unterdrückt @tobiaskrais
+
+###Doku
+* Schreibfehler behoben, Tabellenname angepasst @aeberhard
+
+
 
 ##[1.0.5] - 2020-08-28
 * Diverse kleinere Bugfixes
