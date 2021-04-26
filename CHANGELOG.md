@@ -1,5 +1,12 @@
 #Changelog - yform spam protetion
 
+##[1.1.0] - 2021-04-26
+
+###Feature
+* Classic Template hinzugefügt (vorher hat SpamProtection nur mit dem yform Bootstrap Template funktioniert) @NGWNGW
+
+---
+
 ##[1.0.6] - 2021-03-28
 
 ###Bugfix
@@ -9,7 +16,7 @@
 ###Doku
 * Schreibfehler behoben, Tabellenname angepasst @aeberhard
 
-
+---
 
 ##[1.0.5] - 2020-08-28
 * Diverse kleinere Bugfixes
