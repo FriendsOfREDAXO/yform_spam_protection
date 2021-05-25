@@ -82,6 +82,18 @@ Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Um
 
 Der 4. Parameter am Feld aktiviert den Debug-Modus
 
+Bei mehreren Formularen auf einer Seite musst Du jedem Formular einen eindeutigen Namen mitgeben:
+
+**PHP-Schreibweise**
+```php
+$yform->setObjectparams('form_name','zweites_formular');
+```
+
+**Pipe-Schreibweise**
+```
+objparams|form_name|zweites_formular
+```
+
 ## Lizenz
 
 [MIT Lizenz](LICENSE.md)
