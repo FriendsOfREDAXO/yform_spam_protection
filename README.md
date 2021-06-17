@@ -20,7 +20,7 @@ Weitere geplante Features unter [https://github.com/FriendsOfREDAXO/yform_spam_p
 
 **PHP-Schreibweise**
 ```php
-        $yform->setValueField('spam_protection', array("honeypot","Bitte nicht ausfüllen.","Ihre Anfrage wurde als Spam erkannt und gelöscht. Bitte versuchen Sie es in einigen Minuten erneut oder wenden Sie sich persönlich an uns.", 0));
+$yform->setValueField('spam_protection', array("honeypot","Bitte nicht ausfüllen.","Ihre Anfrage wurde als Spam erkannt und gelöscht. Bitte versuchen Sie es in einigen Minuten erneut oder wenden Sie sich persönlich an uns.", 0));
 ```
 
 **Pipe-Schreibweise**
