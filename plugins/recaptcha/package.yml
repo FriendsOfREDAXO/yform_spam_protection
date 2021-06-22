@@ -1,5 +1,5 @@
 package: yform_spam_protection/recaptcha
-version: '1.0.0'
+version: '1.0.0-beta1'
 author: 'FriendsOfREDAXO'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 
