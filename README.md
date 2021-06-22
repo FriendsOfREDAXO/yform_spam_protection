@@ -9,6 +9,7 @@ Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverl�
 * **Barrierefrei** – ohne Rechenaufgabe oder Bild-Captcha. 
 * **DSGVO-konform** – sofern keine Konfiguration mit externen Anbietern gewählt wird.
 * **Mehrsprachig** - Die Fehlermeldung kann je Sprache durch Addons wie Sprog oder XOutputFilter angepasst werden.
+* **reCaptcha Plugin** - ermöglicht die Einbindung von google recaptcha
 
 Weitere geplante Features unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues)
 
