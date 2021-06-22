@@ -6,7 +6,7 @@ supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 requires:
     redaxo: '^5.9'
     packages:
-        yform: '^3'
+        yform: '>3'
     php:
         version: '>=7.1'
 
