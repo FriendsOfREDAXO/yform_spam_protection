@@ -95,6 +95,8 @@ $yform->setObjectparams('form_name','zweites_formular');
 objparams|form_name|zweites_formular
 ```
 
+Sollte trotz aller beachteten Timings und obigem Tipp zu mehreren Formularen beim Versenden der Fehler 'session-microtime nicht eingehalten...' (bei eingeschalteten Debug-Modus) dauerhaft kommen, so ist zu prüfen, ob das Formular evtl. nicht zweimal abgesendet wird. Mögliche Ursache dafür kann sein, dass im Template beispielsweise `REX_ARTICLE[]` oder `$this->getArticle(1)` mehr als einmal aufgerufen wird.
+
 ## Lizenz
 
 [MIT Lizenz](LICENSE.md)
