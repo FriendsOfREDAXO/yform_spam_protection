@@ -15,44 +15,66 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
         $ipv4 = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4);
         $ipv6 = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
 
+        $ip_whitelist = [];
+        $config_ip_whitelist = rex_config::get('yform_spam_protection', 'ip_whitelist');
+        if ($config_ip_whitelist !== ''){
+            $ip_whitelist = explode(',', $config_ip_whitelist);
+        }
+
         if ($debug) {
             rex_sql::factory()->setDebug($debug)->setQuery("DELETE FROM rex_tmp_yform_spam_protection_frequency  WHERE createdate < (NOW() - INTERVAL ".rex_config::get('yform_spam_protection', 'ip_block_timer')." SECOND)");
         }
 
-        $count = rex_sql::factory()->setDebug($debug)->getArray("SELECT count(`createdate`) AS `count` FROM rex_tmp_yform_spam_protection_frequency WHERE `ipv4` = INET_ATON(:ipv4) AND `ipv6` = :ipv6", [':ipv4' => $ipv4, ':ipv6' => $ipv6])[0]['count'];
-
         $log = [];
 
-        if ($this->params['send'] == 1) {
-            if (rex_request($this->getFieldId()) != "") {
-                $this->params['warning'][$this->getId()] = $this->params['error_class'];
-                $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
-                $log[] = "honeypot wurde ausgefüllt: ".rex_request($this->getFieldId());
-            }
+        if ((null !== rex_backend_login::createUser()) && (rex_config::get('yform_spam_protection', 'ignore_user') === '1')) {
+                $log[] = 'User is logged in';
+        } else {
+            if (!in_array($_SERVER['REMOTE_ADDR'], $ip_whitelist)) {
+                $count = rex_sql::factory()->setDebug($debug)->getArray("SELECT count(`createdate`) AS `count` FROM rex_tmp_yform_spam_protection_frequency WHERE `ipv4` = INET_ATON(:ipv4) AND `ipv6` = :ipv6",
+                    [':ipv4' => $ipv4, ':ipv6' => $ipv6])[0]['count'];
 
-            if (rex_config::get('yform_spam_protection', 'ip_block_limit') < $count) {
-                rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 1)", [':ipv4'=>$ipv4, ':ipv6'=>$ipv6]);
-                $this->params['warning'][$this->getId()] = $this->params['error_class'];
-                $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
-                $log[] = "ip hat zu viele Versuche in kürzester Zeit unternommen";
-            } else {
-                rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 0)", [':ipv4'=>$ipv4, ':ipv6'=>$ipv6]);
-            }
+                if ($this->params['send'] == 1) {
+                    if (rex_request($this->getFieldId()) != "") {
+                        $this->params['warning'][$this->getId()] = $this->params['error_class'];
+                        $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
+                        $log[] = "honeypot wurde ausgefüllt: " . rex_request($this->getFieldId());
+                    }
 
-            if (($session_timestamp + rex_config::get('yform_spam_protection', 'timer_session')) > microtime(true)) {
-                $this->params['warning'][$this->getId()] = $this->params['error_class'];
-                $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
-                $log[] = "session-microtime nicht eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
-            } else {
-                $log[] = "session-microtime eingehalten: $session_timestamp + ".rex_config::get('yform_spam_protection', 'timer_session')." > ".microtime(true);
-            }
+                    if (rex_config::get('yform_spam_protection', 'ip_block_limit') < $count) {
+                        rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 1)",
+                            [':ipv4' => $ipv4, ':ipv6' => $ipv6]);
+                        $this->params['warning'][$this->getId()] = $this->params['error_class'];
+                        $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
+                        $log[] = "ip hat zu viele Versuche in kürzester Zeit unternommen";
+                    } else {
+                        rex_sql::factory()->setDebug($debug)->setQuery("INSERT INTO rex_tmp_yform_spam_protection_frequency (`ipv4`, `ipv6`, `createdate`, `was_blocked`) VALUES (INET_ATON(:ipv4), :ipv6, NOW(), 0)",
+                            [':ipv4' => $ipv4, ':ipv6' => $ipv6]);
+                    }
 
-            if (($form_timestamp + rex_config::get('yform_spam_protection', 'timer_form')) > microtime(true)) {
-                $this->params['warning'][$this->getId()] = $this->params['error_class'];
-                $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
-                $log[] = "formular-microtime nicht eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
+                    if (($session_timestamp + rex_config::get('yform_spam_protection',
+                                'timer_session')) > microtime(true)) {
+                        $this->params['warning'][$this->getId()] = $this->params['error_class'];
+                        $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
+                        $log[] = "session-microtime nicht eingehalten: $session_timestamp + " . rex_config::get('yform_spam_protection',
+                                'timer_session') . " > " . microtime(true);
+                    } else {
+                        $log[] = "session-microtime eingehalten: $session_timestamp + " . rex_config::get('yform_spam_protection',
+                                'timer_session') . " > " . microtime(true);
+                    }
+
+                    if (($form_timestamp + rex_config::get('yform_spam_protection', 'timer_form')) > microtime(true)) {
+                        $this->params['warning'][$this->getId()] = $this->params['error_class'];
+                        $this->params['warning_messages'][$this->getId()] = $this->getElement(3);
+                        $log[] = "formular-microtime nicht eingehalten: $form_timestamp + " . rex_config::get('yform_spam_protection',
+                                'timer_form') . " > " . microtime(true);
+                    } else {
+                        $log[] = "formular-microtime eingehalten: $form_timestamp + " . rex_config::get('yform_spam_protection',
+                                'timer_form') . " > " . microtime(true);
+                    }
+                }
             } else {
-                $log[] = "formular-microtime eingehalten: $form_timestamp + ".rex_config::get('yform_spam_protection', 'timer_form')." > ".microtime(true);
+                $log[] = 'IP was white-listed';
             }
         }
 

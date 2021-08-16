@@ -84,6 +84,18 @@ if (rex::getUser()->isAdmin()) {
     // $field->setNotice($this->i18n('tld_list_notice'));
     // $field->setAttribute('disabled', true);
 
+    $field = $form->addTextField('ip_whitelist');
+    $field->setLabel($this->i18n('ip_whitelist'));
+    $field->setNotice($this->i18n('ip_whitelist_notice'));
+
+    $field = $form->addSelectField('ignore_user');
+    $field->setLabel($this->i18n('ignore_user'));
+    $field->setNotice($this->i18n('ignore_user_notice'));
+    $select = $field->getSelect();
+    $select->setSize(1);
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+
     $fragment = new rex_fragment();
     $fragment->setVar('class', 'edit', false);
     $fragment->setVar('title', $this->i18n('title'), false);
