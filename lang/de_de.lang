@@ -24,3 +24,7 @@ yform_spam_protection_tld_list = Top-Level-Domains
 yform_spam_protection_tld_list_notice = Top-Level-Domains, an die kein Versand erfolgen soll, bspw. <code>.ru</code>
 yform_spam_protection_activate = Aktivieren
 yform_spam_protection_deactivate = Deaktivieren
+yform_spam_protection_ip_whitelist = IP Whitelist
+yform_spam_protection_ip_whitelist_notice = Liste von IPs die nicht blockiert werden sollen. IPs mit Komma trennen.
+yform_spam_protection_ignore_user = Eingeloggt Benutzer ignorieren
+yform_spam_protection_ignore_user_notice = Ignoriert Benutzer die im Redaxo Backend eingeloggt sind.
