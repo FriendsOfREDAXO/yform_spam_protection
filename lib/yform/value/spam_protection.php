@@ -72,6 +72,21 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                         $log[] = "formular-microtime eingehalten: $form_timestamp + " . rex_config::get('yform_spam_protection',
                                 'timer_form') . " > " . microtime(true);
                     }
+					
+					if (trim(rex_config::get('yform_spam_protection', 'use_stopforumspam'), '|')) {
+						$result = file_get_contents('http://api.stopforumspam.org/api?ip='.$_SERVER['REMOTE_ADDR']);
+						if ($result) {
+							$doc = new DOMDocument();
+							$doc->loadXML($result);
+							if ($doc->getElementsByTagName('appears')[0]->nodeValue == 'yes') {
+								$this->params['warning'][$this->getId()] = $this->params['error_class'];
+								$this->params['warning_messages'][$this->getId()] = '{{ use_stopforumspam_ip_is_locked }}';
+								$log[] = "Die IP Adresse ist gesperrt." . rex_request($this->getFieldId());
+								rex_logger::factory()->log('info','Stop Forum Spam'.$_SERVER['REMOTE_ADDR'],[],__FILE__,__LINE__);
+							}
+						}
+					}
+					
                 }
             } else {
                 $log[] = 'IP was white-listed';

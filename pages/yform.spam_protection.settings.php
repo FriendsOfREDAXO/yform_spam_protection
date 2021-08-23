@@ -62,6 +62,12 @@ if (rex::getUser()->isAdmin()) {
     $field = $form->addTextField('ip_block_timer');
     $field->setLabel($this->i18n('timer_block_limit_window'));
     $field->setNotice($this->i18n('timer_block_limit_window_notice'));
+	
+    $field = $form->addCheckboxField('use_stopforumspam');
+    $field->addOption($this->i18n('use_stop_forum_spam_cbx'), "1");
+    $field->setLabel($this->i18n('use_stop_forum_spam_label'));
+    $field->setNotice($this->i18n('use_stop_forum_spam_notice'));	
+	
 
     // $field = $form->addSelectField('geo_block');
     // $field->setLabel($this->i18n('geoip'));

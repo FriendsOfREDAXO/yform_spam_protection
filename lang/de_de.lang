@@ -28,3 +28,7 @@ yform_spam_protection_ip_whitelist = IP Whitelist
 yform_spam_protection_ip_whitelist_notice = Liste von IPs, die nicht blockiert werden sollen. Z.B. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
 yform_spam_protection_ignore_user = Eingeloggte Backend-Benutzer ignorieren
 yform_spam_protection_ignore_user_notice = Ignoriert Benutzer die im Redaxo Backend eingeloggt sind.
+
+yform_spam_protection_use_stop_forum_spam_cbx = Stop Forum Spam verwenden
+yform_spam_protection_use_stop_forum_spam_label = Stop Forum Spam
+yform_spam_protection_use_stop_forum_spam_notice = Stop Forum Spam ist ein Dienst, über den die IP Adresse der Anfrage geprüft wird. https://www.stopforumspam.com/
