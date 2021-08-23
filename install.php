@@ -1,10 +1,14 @@
 <?php
 
 rex_sql_table::get(rex::getTable('tmp_yform_spam_protection_frequency'))
+    ->ensurePrimaryIdColumn()
     ->ensureColumn(new rex_sql_column('ipv4', 'int(10) unsigned', true))
     ->ensureColumn(new rex_sql_column('ipv6', 'varbinary(16)', true))
-    ->ensureColumn(new rex_sql_column('createdate', 'datetime', false))
+    ->ensureColumn(new rex_sql_column('createdate', 'datetime'))
+    ->ensureColumn(new rex_sql_column('releasedate', 'datetime', true))
     ->ensureColumn(new rex_sql_column('was_blocked', 'bit(1)'))
+    ->ensureColumn(new rex_sql_column('name_hashed', 'char(32)', true))
+    ->ensureColumn(new rex_sql_column('email_hashed', 'char(32)', true))
     ->ensure();
 
     if (!$this->hasConfig("notification_email")) {
