@@ -21,9 +21,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
             $ip_whitelist = explode(',', $config_ip_whitelist);
         }
 
-        if ($debug) {
-            rex_sql::factory()->setDebug($debug)->setQuery("DELETE FROM rex_tmp_yform_spam_protection_frequency  WHERE createdate < (NOW() - INTERVAL ".rex_config::get('yform_spam_protection', 'ip_block_timer')." SECOND)");
-        }
+    rex_sql::factory()->setDebug($debug)->setQuery("DELETE FROM rex_tmp_yform_spam_protection_frequency  WHERE createdate < (NOW() - INTERVAL ".rex_config::get('yform_spam_protection', 'ip_block_timer')." SECOND)");
 
         $log = [];
 
