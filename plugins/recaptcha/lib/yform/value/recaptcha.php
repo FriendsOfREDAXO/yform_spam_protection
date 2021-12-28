@@ -45,7 +45,7 @@ class rex_yform_value_recaptcha extends rex_yform_value_abstract
         $this->params['form_output'][$this->getId()] = $this->parse('value.recaptcha.tpl.php', compact('publicKey', 'loadScript'));
     }
 
-    public function getDescription()
+    public function getDescription(): string
     {
         return 'recaptcha|name|public_key|private_key|error_message|load_script[1,0]|';
     }

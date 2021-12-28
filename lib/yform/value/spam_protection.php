@@ -2,7 +2,7 @@
 
 class rex_yform_value_spam_protection extends rex_yform_value_abstract
 {
-    public function postValidateAction()
+    public function postValidateAction(): void
     {
         rex_login::startSession();
 
@@ -107,7 +107,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
         }
     }
 
-    public function getDescription()
+    public function getDescription(): string
     {
         return 'spam_protection|honeypot|label(Bitte nicht ausfüllen)|Fehler(Ihre Anfrage wurde als Spam erkannt.)|Debugmodus(0/1)';
     }
