@@ -27,7 +27,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
                 $reasons = explode(",", $ip_dataset->getValue('reason'));
                 $this->params['warning'][$this->getId()] = $this->params['error_class'];
                 foreach ($reasons as $reason => $message) {
-                    $this->params['warning_messages'][$this->getId()] = "{{ yform_spam_protection_warning }} ". "{{ $message }}";
+                    $this->params['warning_messages'][$this->getId()."_".$reason] = "{{ yform_spam_protection_warning }} ". "{{ $message }}";
                 }
             }
         }
