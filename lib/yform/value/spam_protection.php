@@ -20,7 +20,7 @@ class rex_yform_value_spam_protection extends rex_yform_value_abstract
 
         
         if ($this->params['send'] == 1) {
-            $ip_dataset = spam_protection::check($ip, 1, $form_microtime, $session_microtime, rex_request($this->getFieldId(), 'string', ''), $email);
+            $ip_dataset = spam_protection::check($ip, $this->getElement(5), $form_microtime, $session_microtime, rex_request($this->getFieldId(), 'string', ''), $email);
 
             /* Fehlermeldeungen erhalten */
             if ($ip_dataset->getValue('reason')) {
