@@ -1,4 +1,4 @@
-yform_spam_protection_title = Schaltflächen zur Datenschutzerklärung
+yform_spam_protection_title = Einstellungen zur Empfindlichkeit des Spamschutz
 yform_spam_protection_settings = Einstellungen
 yform_spam_protection_error_message = Fehlermeldung
 yform_spam_protection_error_notice = Fehlermeldung, die die Validierung ausgeben soll. Kann mit dem Addon Sprog oder XOutputFilter mehrsprachig übersetzt werden.
@@ -31,4 +31,4 @@ yform_spam_protection_ignore_user_notice = Ignoriert Benutzer die im Redaxo Back
 
 yform_spam_protection_use_stop_forum_spam_cbx = Stop Forum Spam verwenden
 yform_spam_protection_use_stop_forum_spam_label = Stop Forum Spam
-yform_spam_protection_use_stop_forum_spam_notice = Stop Forum Spam ist ein Dienst, über den die IP Adresse der Anfrage geprüft wird. https://www.stopforumspam.com/
+yform_spam_protection_use_stop_forum_spam_notice = Stop Forum Spam ist ein Dienst, über den die IP Adresse der Anfrage geprüft wird. <strong>Dies hat Auswirkungen auf den Datenschutz!</strong> https://www.stopforumspam.com/
