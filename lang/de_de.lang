@@ -1,4 +1,4 @@
-yform_spam_protection_title = Schaltflächen zur Datenschutzerklärung
+yform_spam_protection_title = Spamschutz-Einstellungen
 yform_spam_protection_settings = Einstellungen
 yform_spam_protection_error_message = Fehlermeldung
 yform_spam_protection_error_notice = Fehlermeldung, die die Validierung ausgeben soll. Kann mit dem Addon Sprog oder XOutputFilter mehrsprachig übersetzt werden.
@@ -7,6 +7,8 @@ yform_spam_protection_timer = Timer
 yform_spam_protection_honeypot = Honeypot
 
 yform_spam_protection_flushed = Alle Einträge wurden gelöscht
+
+yform_spam_protection_rules = Regeln 
 
 yform_spam_protection_whitelist = Immer erlauben
 yform_spam_protection_external_services = Zusätzliche externe Dienste
