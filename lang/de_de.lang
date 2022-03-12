@@ -2,40 +2,33 @@ yform_spam_protection_title = Schaltflächen zur Datenschutzerklärung
 yform_spam_protection_settings = Einstellungen
 yform_spam_protection_error_message = Fehlermeldung
 yform_spam_protection_error_notice = Fehlermeldung, die die Validierung ausgeben soll. Kann mit dem Addon Sprog oder XOutputFilter mehrsprachig übersetzt werden.
-
+yform_spam_protection_checks = Prüfungen (Einstellungen im Moment noch ohne Auswirkung)
 yform_spam_protection_timer = Timer
 yform_spam_protection_honeypot = Honeypot
-
-yform_spam_protection_flushed = Alle Einträge wurden gelöscht
-
-yform_spam_protection_whitelist = Immer erlauben
-yform_spam_protection_external_services = Zusätzliche externe Dienste
-
-yform_spam_protection_block_session_time_label = Session-Zeitfenster
-yform_spam_protection_block_session_time_notice = Anzahl der Sekunden, die mind. für die Bearbeitung oder Korrektur eines Formulars benötigt werden.
-
-yform_spam_protection_block_form_time_label = Formular-Zeitfenster
-yform_spam_protection_block_form_time_notice = Anzahl der Sekunden, die mind. seit dem 1. Aufruf eines Formulars vergehen muss, bis es erfolgreich abgesendet werden darf.
-
-yform_spam_protection_block_threshold_limit_label  = Sperren ab...
-yform_spam_protection_block_threshold_limit_notice = Anzahl, die im IP-Sperren-Zeitfenster überschritten werden muss, z.B. <code>10</code> pro Zeitfenster
-
-yform_spam_protection_block_threshold_time_label = IP-Sperren-Zeitfenster
-yform_spam_protection_block_threshold_time_notice = In Sekunden, in denen das Anfrage-Limit überschritten werden muss, z.B. <code>600</code> für 10 Minuten.
-
-yform_spam_protection_block_tlds_label = Top-Level-Domains
-yform_spam_protection_block_tlds_notice = Top-Level-Domains, deren Mail-Adressen geblockt werden sollen, bspw. <code>.ru</code>
-
+yform_spam_protection_block_ip_dyn = Dynamische IP-Sperre
+yform_spam_protection_block_ip_dyn_notice = Sollten zu viele Formulare über diese IP-Adresse versendet werden, wird die IP für eine bestimmte Zeit geblockt.
+yform_spam_protection_advanced_settings = Erweiterte Einstellungen
+yform_spam_protection_email = E-Mail-Adresse (noch inaktiv)
+yform_spam_protection_email_notice = Adresse, die bei erhöhtem Spam-Aufkommen benachrichtigt wird.
+yform_spam_protection_timer_1 = Session Timer
+yform_spam_protection_timer_1_notice = Anzahl der Sekunden, die mind. für die Bearbeitung oder Korrektur eines Formulars benötigt werden.
+yform_spam_protection_timer_2 = Formular Timer
+yform_spam_protection_timer_2_notice = Anzahl der Sekunden, die mind. seit dem 1. Aufruf eines Formulars vergehen muss.
+yform_spam_protection_timer_block_limit = IP-Sperren-Limit
+yform_spam_protection_timer_block_limit_notice = Anzahl, die im IP-Sperren-Zeitfenster überschritten werden muss, z.B. <code>10</code> pro Zeitfenster
+yform_spam_protection_timer_block_limit_window = IP-Sperren-Zeitfenster
+yform_spam_protection_timer_block_limit_window_notice = In Sekunden, in denen das Anfrage-Limit überschritten werden muss, z.B. <code>600</code> für 10 Minuten.
+yform_spam_protection_geoip = GeoIP-Sperre
+yform_spam_protection_tld_block = IP-Sperre
+yform_spam_protection_tld_list = Top-Level-Domains
+yform_spam_protection_tld_list_notice = Top-Level-Domains, an die kein Versand erfolgen soll, bspw. <code>.ru</code>
 yform_spam_protection_activate = Aktivieren
 yform_spam_protection_deactivate = Deaktivieren
+yform_spam_protection_ip_whitelist = IP Whitelist
+yform_spam_protection_ip_whitelist_notice = Liste von IPs, die nicht blockiert werden sollen. Z.B. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user = Eingeloggte Backend-Benutzer ignorieren
+yform_spam_protection_ignore_user_notice = Ignoriert Benutzer die im Redaxo Backend eingeloggt sind.
 
-yform_spam_protection_whitelist_ips_label = IP Whitelist
-yform_spam_protection_whitelist_ips_notice = Liste von IPs, die nicht blockiert werden sollen. Z.B. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
-
-yform_spam_protection_whitelist_user_label = REDAXO-Benutzer ignorieren
-yform_spam_protection_whitelist_user_notice = Ignoriert eingeloggte REDAXO-Benutzer ignorieren.
-yform_spam_protection_whitelist_ycom_user_label = YCom-Benutzer ignorieren
-yform_spam_protection_whitelist_ycom_user_notice = Ignoriert eingeloggte YCom-Benutzer
-yform_spam_protection_whitelist_ycom_user_notice_disabled = Ignoriert eingeloggte YCom-Benutzer (YCom ist nicht installiert)
-yform_spam_protection_block_stopforumspam_label = Stop Forum Spam
-yform_spam_protection_block_stopforumspam_notice = Stop Forum Spam ist ein externer Dienst, über den die IP-Adresse der Anfrage geprüft wird. https://www.stopforumspam.com/
+yform_spam_protection_use_stop_forum_spam_cbx = Stop Forum Spam verwenden
+yform_spam_protection_use_stop_forum_spam_label = Stop Forum Spam
+yform_spam_protection_use_stop_forum_spam_notice = Stop Forum Spam ist ein Dienst, über den die IP Adresse der Anfrage geprüft wird. https://www.stopforumspam.com/

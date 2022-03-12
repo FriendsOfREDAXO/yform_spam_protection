@@ -1,14 +1,14 @@
 package: yform_spam_protection
-version: '2.0-dev'
+version: '1.2.1'
 author: 'Alexander Walther, FriendsOfREDAXO'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 
 requires:
-    redaxo: '^5.12'
+    redaxo: '^5.9'
     packages:
-        yform: '^4'
+        yform: '>3'
     php:
-        version: '>=7.4'
+        version: '>=7.1'
 
 page:
     hidden: true
@@ -19,27 +19,8 @@ pages:
         subpages:
             settings:
                 title: 'Einstellungen'
-                perm: yform_spam_protection
             docs:
                 title: 'Dokumentation'
-            log:
-                title: 'Log'
-                subPath: pages/yform.spam_protection.log.php
-                table_name: rex_tmp_spam_protection_log
-                perm: yform_spam_protection
 
 default_config:
-    block_session_time: 2
-    block_form_time: 5
-    block_threshold_limit: 10
-    block_threshold_time: 300
-    block_tlds: '.ru'
-#   block_geoip: 0
-
-    whitelist_user: 1
-    whitelist_ips: '127.0.0.1'
-    whitelist_ycom_user: 1
-
-    block_stopforumspam: 0
-
-#   notification_email: ''
+    timer: 5
