@@ -24,8 +24,6 @@ pages:
                 title: 'Dokumentation'
             log:
                 title: 'Log'
-                subPath: pages/yform.spam_protection.log.php
-                table_name: rex_tmp_spam_protection_log
                 perm: yform_spam_protection
 
 default_config:

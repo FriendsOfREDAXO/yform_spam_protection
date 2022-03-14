@@ -1,6 +1,6 @@
 <?php
 
-echo rex_view::title(rex_i18n::msg('yform'));
+echo rex_view::title(rex_i18n::msg('yform_spam_protection_title'));
 
 if (rex_request::get('func', 'string') == "flush") {
     spam_protection::release();
