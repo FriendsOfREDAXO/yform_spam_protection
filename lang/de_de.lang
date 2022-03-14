@@ -6,10 +6,9 @@ yform_spam_protection_error_notice = Fehlermeldung, die die Validierung ausgeben
 yform_spam_protection_timer = Timer
 yform_spam_protection_honeypot = Honeypot
 
-yform_spam_protection_flushed = Alle Einträge wurden gelöscht
+yform_spam_protection_flushed = Alle Log-Einträge wurden gelöscht.
 
 yform_spam_protection_rules = Regeln 
-
 yform_spam_protection_whitelist = Immer erlauben
 yform_spam_protection_external_services = Zusätzliche externe Dienste
 
@@ -19,10 +18,10 @@ yform_spam_protection_block_session_time_notice = Anzahl der Sekunden, die mind.
 yform_spam_protection_block_form_time_label = Formular-Zeitfenster
 yform_spam_protection_block_form_time_notice = Anzahl der Sekunden, die mind. seit dem 1. Aufruf eines Formulars vergehen muss, bis es erfolgreich abgesendet werden darf.
 
-yform_spam_protection_block_threshold_limit_label  = Sperren ab...
-yform_spam_protection_block_threshold_limit_notice = Anzahl, die im IP-Sperren-Zeitfenster überschritten werden muss, z.B. <code>10</code> pro Zeitfenster
+yform_spam_protection_block_threshold_limit_label  = Erlaubte Versuche
+yform_spam_protection_block_threshold_limit_notice = Anzahl von erlaubten Versandversuchen, bis die Sperre eintritt, z.B. <code>10</code> pro Sperrzeitraum
 
-yform_spam_protection_block_threshold_time_label = IP-Sperren-Zeitfenster
+yform_spam_protection_block_threshold_time_label = Sperrdauer
 yform_spam_protection_block_threshold_time_notice = In Sekunden, in denen das Anfrage-Limit überschritten werden muss, z.B. <code>600</code> für 10 Minuten.
 
 yform_spam_protection_block_tlds_label = Top-Level-Domains
@@ -36,8 +35,10 @@ yform_spam_protection_whitelist_ips_notice = Liste von IPs, die nicht blockiert 
 
 yform_spam_protection_whitelist_user_label = REDAXO-Benutzer ignorieren
 yform_spam_protection_whitelist_user_notice = Ignoriert eingeloggte REDAXO-Benutzer ignorieren.
+
 yform_spam_protection_whitelist_ycom_user_label = YCom-Benutzer ignorieren
 yform_spam_protection_whitelist_ycom_user_notice = Ignoriert eingeloggte YCom-Benutzer
 yform_spam_protection_whitelist_ycom_user_notice_disabled = Ignoriert eingeloggte YCom-Benutzer (YCom ist nicht installiert)
+
 yform_spam_protection_block_stopforumspam_label = Stop Forum Spam
 yform_spam_protection_block_stopforumspam_notice = Stop Forum Spam ist ein externer Dienst, über den die IP-Adresse der Anfrage geprüft wird. https://www.stopforumspam.com/
