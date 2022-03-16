@@ -19,6 +19,6 @@ $table_name = 'rex_tmp_spam_protection_log';
 );
 
 
-$_REQUEST['table_name'] = 'rex_tmp_spam_protection_log';
+$_REQUEST['table_name'] = $table_name;
 
 include \rex_path::plugin('yform', 'manager', 'pages/data_edit.php');
