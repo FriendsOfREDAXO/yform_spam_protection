@@ -172,7 +172,7 @@ class spam_protection extends \rex_yform_manager_dataset
     }
 
 
-    public static function getConfig($key) :mixed
+    public static function getConfig($key)
     {
         return rex_config::get('yform_spam_protection', $key);
     }
