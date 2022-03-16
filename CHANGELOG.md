@@ -16,7 +16,16 @@
 
 * Überarbeitete Einstellungsseite
 * Einstellungen und Log sind jetzt auch für andere Benutzer-Rollen verfügbar, z.B. Redakteure
-* Eigene `spam_protection`-Klasse auf Basis von YForm, mit der die Validierung auch außerhalb von YForm nutzbar wird oder eigene und einzelne Prüfungen abgeleitet werden können.
+* Eigene `spam_protection`-Klasse auf Basis von YForm, mit der die Validierung auch außerhalb von YForm nutzbar wird oder eigene und einzelne Prüfungen abgeleitet werden können:
+
+```php
+$ip_dataset = spam_protection::check($ip, $debug = false, $form_microtime = null, $session_microtime = null, $honeypot_value = '', $email = '');
+
+/* Fehlermeldeungen erhalten */
+if ($ip_dataset->getValue('reason')) {
+    // Fehlermeldung ausgeben, eigene Skriptverarbeitung stoppen 
+}
+```
 
 ## [1.1.0] - 2021-04-26
 
