@@ -1,0 +1,35 @@
+yform_spam_protection_title=Tietosuojakäytännön painikkeet
+yform_spam_protection_settings=asetukset
+yform_spam_protection_error_message=virheviesti
+yform_spam_protection_error_notice=Virheilmoitus, jonka validoinnin tulee tulostaa. Voidaan kääntää useille kielille Addon Sprogin tai XOutputFilterin avulla.
+yform_spam_protection_checks=Testit (asetuksella ei ole vaikutusta tällä hetkellä)
+yform_spam_protection_timer=ajastin
+yform_spam_protection_honeypot=hunajapurkki
+yform_spam_protection_block_ip_dyn=Dynaaminen IP-esto
+yform_spam_protection_block_ip_dyn_notice=Jos tämän IP-osoitteen kautta lähetetään liian monta lomaketta, IP estetään tietyksi ajaksi.
+yform_spam_protection_advanced_settings=Lisäasetukset
+yform_spam_protection_email=Sähköpostiosoite (vielä ei-aktiivinen)
+yform_spam_protection_email_notice=Osoite, johon ilmoitetaan roskapostin lisääntymisestä.
+yform_spam_protection_timer_1=istunnon ajastin
+yform_spam_protection_timer_1_notice=Lomakkeen muokkaamiseen tai korjaamiseen tarvittava vähimmäismäärä sekunteja.
+yform_spam_protection_timer_2=Lomakeajastin
+yform_spam_protection_timer_2_notice=Sekuntien lukumäärä, jonka on kuluttava vähintään lomakkeen ensimmäisestä kutsusta.
+yform_spam_protection_timer_block_limit=IP-eston raja
+yform_spam_protection_timer_block_limit_notice=Luku, joka on ylitettävä IP-eston aikavälissä, esim. <code>10</code> per aikaväli
+yform_spam_protection_timer_block_limit_window=IP-eston aikaikkuna
+yform_spam_protection_timer_block_limit_window_notice=Sekunneissa, jolloin pyyntöraja on ylitettävä, esim. <code>600</code> 10 minuutin ajan.
+yform_spam_protection_geoip=GeoIP-lukko
+yform_spam_protection_tld_block=IP-lukko
+yform_spam_protection_tld_list=ylätason verkkotunnuksia
+yform_spam_protection_tld_list_notice=Ylätason verkkotunnukset, joita ei pidä lähettää, esim. <code>.ru</code>
+yform_spam_protection_activate=Aktivoida
+yform_spam_protection_deactivate=Poista käytöstä
+yform_spam_protection_ip_whitelist=IP valkoinen lista
+yform_spam_protection_ip_whitelist_notice=Luettelo IP-osoitteista, joita ei voida estää. Esim. <code>192.168.0.1, 192.168.0.2, 192.168.0.3</code>
+yform_spam_protection_ignore_user=Ohita sisäänkirjautuneita taustakäyttäjiä
+yform_spam_protection_ignore_user_notice=Ohittaa käyttäjät, jotka ovat kirjautuneet Redaxo-taustajärjestelmään.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Lopeta foorumin roskapostin käyttö
+yform_spam_protection_use_stop_forum_spam_label=Lopeta foorumin roskaposti
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam on palvelu, joka tarkistaa pyynnön IP-osoitteen. https://www.stopforumspam.com/
+

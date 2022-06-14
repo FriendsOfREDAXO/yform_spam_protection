@@ -1,0 +1,35 @@
+yform_spam_protection_title=أزرار نهج الخصوصية
+yform_spam_protection_settings=الإعدادات
+yform_spam_protection_error_message=رسالة خطأ
+yform_spam_protection_error_notice=رسالة خطأ مفادها أنه يجب إخراج التحقق. يمكن ترجمتها إلى لغات متعددة باستخدام Addon Sprog أو XOutputFilter.
+yform_spam_protection_checks=الاختبارات (الإعدادات ليس لها تأثير في الوقت الحالي)
+yform_spam_protection_timer=جهاز ضبط الوقت
+yform_spam_protection_honeypot=وعاء العسل
+yform_spam_protection_block_ip_dyn=حجب IP الديناميكي
+yform_spam_protection_block_ip_dyn_notice=إذا تم إرسال عدد كبير جدًا من النماذج عبر عنوان IP هذا ، فسيتم حظر IP لفترة زمنية معينة.
+yform_spam_protection_advanced_settings=إعدادات متقدمة
+yform_spam_protection_email=عنوان البريد الإلكتروني (لا يزال غير نشط)
+yform_spam_protection_email_notice=العنوان الذي سيتم إخطاره بزيادة حجم البريد العشوائي.
+yform_spam_protection_timer_1=مؤقت الجلسة
+yform_spam_protection_timer_1_notice=الحد الأدنى لعدد الثواني المطلوبة لتحرير أو تصحيح نموذج.
+yform_spam_protection_timer_2=مؤقت النموذج
+yform_spam_protection_timer_2_notice=عدد الثواني التي يجب أن تنقضي على الأقل منذ الاستدعاء الأول للنموذج.
+yform_spam_protection_timer_block_limit=حد حظر IP
+yform_spam_protection_timer_block_limit_notice=الرقم الذي يجب تجاوزه في الفاصل الزمني لحظر IP ، على سبيل المثال <code>10</code> لكل فترة زمنية
+yform_spam_protection_timer_block_limit_window=نافذة وقت حظر IP
+yform_spam_protection_timer_block_limit_window_notice=في الثواني التي يجب فيها تجاوز حد الطلب ، على سبيل المثال</code> <code>10 دقائق.
+yform_spam_protection_geoip=قفل GeoIP
+yform_spam_protection_tld_block=قفل IP
+yform_spam_protection_tld_list=نطاقات المستوى الأعلى
+yform_spam_protection_tld_list_notice=نطاقات المستوى الأعلى التي لا يجب إرسالها إليها ، على سبيل المثال <code>.ru</code>
+yform_spam_protection_activate=تفعيل
+yform_spam_protection_deactivate=تعطيل
+yform_spam_protection_ip_whitelist=القائمة البيضاء IP
+yform_spam_protection_ip_whitelist_notice=قائمة عناوين IP التي يجب عدم حظرها. على سبيل المثال <code>192.168.0.1،192.168.0.2،192.168.0.3</code>
+yform_spam_protection_ignore_user=تجاهل المستخدمين المسجلين في الخلفية
+yform_spam_protection_ignore_user_notice=يتجاهل المستخدمين الذين قاموا بتسجيل الدخول إلى الواجهة الخلفية لـ Redaxo.
+
+yform_spam_protection_use_stop_forum_spam_cbx=التوقف عن استخدام المنتدى البريد العشوائي
+yform_spam_protection_use_stop_forum_spam_label=وقف المنتدى البريد العشوائي
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam هي خدمة تتحقق من عنوان IP الخاص بالطلب. https://www.stopforumspam.com/
+

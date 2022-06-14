@@ -1,0 +1,35 @@
+yform_spam_protection_title=Кнопки політики конфіденційності
+yform_spam_protection_settings=налаштування
+yform_spam_protection_error_message=повідомлення про помилку
+yform_spam_protection_error_notice=Повідомлення про помилку, яке має вивести перевірка. Можна перекласти на кілька мов за допомогою Addon Sprog або XOutputFilter.
+yform_spam_protection_checks=Тести (налаштування на даний момент не діють)
+yform_spam_protection_timer=таймер
+yform_spam_protection_honeypot=горщик для меду
+yform_spam_protection_block_ip_dyn=Динамічне блокування IP
+yform_spam_protection_block_ip_dyn_notice=Якщо через цю IP-адресу буде надіслано занадто багато форм, IP буде заблоковано на певний період часу.
+yform_spam_protection_advanced_settings=Розширені налаштування
+yform_spam_protection_email=Адреса електронної пошти (досі неактивна)
+yform_spam_protection_email_notice=Адреса, на яку буде надходити сповіщення про збільшення кількості спаму.
+yform_spam_protection_timer_1=таймер сеансу
+yform_spam_protection_timer_1_notice=Мінімальна кількість секунд, необхідна для редагування або виправлення форми.
+yform_spam_protection_timer_2=Таймер форми
+yform_spam_protection_timer_2_notice=Кількість секунд, яка має пройти принаймні з моменту першого виклику форми.
+yform_spam_protection_timer_block_limit=Обмеження блокування IP
+yform_spam_protection_timer_block_limit_notice=Число, яке має бути перевищено у часовому інтервалі IP-блокування, наприклад <code>10</code> на часовий інтервал
+yform_spam_protection_timer_block_limit_window=Часове вікно блокування IP
+yform_spam_protection_timer_block_limit_window_notice=У секундах, за які необхідно перевищити ліміт запиту, наприклад <code>600</code> протягом 10 хвилин.
+yform_spam_protection_geoip=Блокування GeoIP
+yform_spam_protection_tld_block=IP блокування
+yform_spam_protection_tld_list=домени верхнього рівня
+yform_spam_protection_tld_list_notice=Домени верхнього рівня, на які не слід надсилати, наприклад, <code>.ru</code>
+yform_spam_protection_activate=Активувати
+yform_spam_protection_deactivate=Деактивувати
+yform_spam_protection_ip_whitelist=Білий список IP-адрес
+yform_spam_protection_ip_whitelist_notice=Список IP-адрес, які не потрібно блокувати. Наприклад <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user=Ігнорувати користувачів, які ввійшли в систему
+yform_spam_protection_ignore_user_notice=Ігнорує користувачів, які ввійшли в сервер Redaxo.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Припиніть використовувати форумний спам
+yform_spam_protection_use_stop_forum_spam_label=Зупинити форумний спам
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam — це служба, яка перевіряє IP-адресу запиту. https://www.stopforumspam.com/
+

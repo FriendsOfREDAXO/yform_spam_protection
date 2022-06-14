@@ -1,0 +1,35 @@
+yform_spam_protection_title=Knoppen voor privacybeleid
+yform_spam_protection_settings=instellingen
+yform_spam_protection_error_message=foutmelding
+yform_spam_protection_error_notice=Foutbericht dat de validatie moet worden uitgevoerd. Kan naar meerdere talen worden vertaald met behulp van de Addon Sprog of XOutputFilter.
+yform_spam_protection_checks=Testen (instellingen hebben op dit moment geen effect)
+yform_spam_protection_timer=tijdopnemer
+yform_spam_protection_honeypot=honingpot
+yform_spam_protection_block_ip_dyn=Dynamische IP-blokkering
+yform_spam_protection_block_ip_dyn_notice=Als er teveel formulieren via dit IP-adres worden verzonden, wordt het IP-adres voor een bepaalde tijd geblokkeerd.
+yform_spam_protection_advanced_settings=Geavanceerde instellingen
+yform_spam_protection_email=E-mailadres (nog inactief)
+yform_spam_protection_email_notice=Adres dat op de hoogte wordt gesteld van een verhoogd spamvolume.
+yform_spam_protection_timer_1=sessietimer
+yform_spam_protection_timer_1_notice=Minimum aantal seconden dat nodig is om een formulier te bewerken of te corrigeren.
+yform_spam_protection_timer_2=Formuliertimer
+yform_spam_protection_timer_2_notice=Aantal seconden dat minimaal moet verstrijken sinds de eerste oproep van een formulier.
+yform_spam_protection_timer_block_limit=IP-blokkeringslimiet
+yform_spam_protection_timer_block_limit_notice=Aantal dat overschreden moet worden in het IP-blokkeringstijdvak, bijv. <code>10</code> per tijdvak
+yform_spam_protection_timer_block_limit_window=IP-blokkeringstijdvenster
+yform_spam_protection_timer_block_limit_window_notice=In seconden waarin de verzoeklimiet moet worden overschreden, bijv. <code>600</code> gedurende 10 minuten.
+yform_spam_protection_geoip=GeoIP-vergrendeling
+yform_spam_protection_tld_block=IP-slot
+yform_spam_protection_tld_list=top-level domeinen
+yform_spam_protection_tld_list_notice=Topleveldomeinen waarnaar niet mag worden verzonden, bijv. <code>.ru</code>
+yform_spam_protection_activate=Activeren
+yform_spam_protection_deactivate=Deactiveren
+yform_spam_protection_ip_whitelist=IP-witte lijst
+yform_spam_protection_ip_whitelist_notice=Lijst met IP's die niet mogen worden geblokkeerd. Bijv. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user=Ingelogde backend-gebruikers negeren
+yform_spam_protection_ignore_user_notice=Negeert gebruikers die zijn ingelogd op de Redaxo-backend.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Stop met het gebruik van forumspam
+yform_spam_protection_use_stop_forum_spam_label=Stop forumspam
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam is een dienst die het IP-adres van het verzoek controleert. https://www.stopforumspam.com/
+

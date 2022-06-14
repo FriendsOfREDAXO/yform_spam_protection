@@ -1,0 +1,35 @@
+yform_spam_protection_title=Privatsphär Politik Knäppercher
+yform_spam_protection_settings=Astellungen
+yform_spam_protection_error_message=Feeler Message
+yform_spam_protection_error_notice=Fehlermeldung datt d'Validatioun soll erausginn. Kann op verschidde Sproochen iwwersat ginn mam Addon Sprog oder XOutputFilter.
+yform_spam_protection_checks=Tester (Astellungen hu keen Effekt am Moment)
+yform_spam_protection_timer=Timer
+yform_spam_protection_honeypot=Hunneg Pot
+yform_spam_protection_block_ip_dyn=Dynamesch IP Blocking
+yform_spam_protection_block_ip_dyn_notice=Wann ze vill Formulairen iwwer dës IP Adress geschéckt ginn, gëtt d'IP fir eng gewëssen Zäit gespaart.
+yform_spam_protection_advanced_settings=Fortgeschratt Astellungen
+yform_spam_protection_email=E-Mail Adress (nach ëmmer inaktiv)
+yform_spam_protection_email_notice=Adress déi iwwer erhéicht Spamvolumen matgedeelt gëtt.
+yform_spam_protection_timer_1=Sëtzung Timer
+yform_spam_protection_timer_1_notice=Minimum Unzuel u Sekonnen néideg fir e Formulaire z'änneren oder ze korrigéieren.
+yform_spam_protection_timer_2=Form Timer
+yform_spam_protection_timer_2_notice=Zuel vun de Sekonnen déi op d'mannst zanter dem 1. Uruff vun enger Form muss verléiere.
+yform_spam_protection_timer_block_limit=IP Spär Limit
+yform_spam_protection_timer_block_limit_notice=Zuel déi am IP Spär Zäit Stonneplang iwwerschratt muss, zB <code>10</code> pro Zäit Stonneplang
+yform_spam_protection_timer_block_limit_window=IP Spär Zäitfenster
+yform_spam_protection_timer_block_limit_window_notice=A Sekonnen, an deenen d'Ufrolimit muss iwwerschratt ginn, zB <code>600</code> fir 10 Minutten.
+yform_spam_protection_geoip=GeoIP Spär
+yform_spam_protection_tld_block=IP Spär
+yform_spam_protection_tld_list=Top-Level Domainen
+yform_spam_protection_tld_list_notice=Top-Level Domainen déi net solle geschéckt ginn, zB <code>.ru</code>
+yform_spam_protection_activate=Aktivéieren
+yform_spam_protection_deactivate=Deaktivéieren
+yform_spam_protection_ip_whitelist=IP wäiss Lëscht
+yform_spam_protection_ip_whitelist_notice=Lëscht vun IPen déi net blockéiert ginn. Zum Beispill <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user=Ignoréieren ageloggt Backend Benotzer
+yform_spam_protection_ignore_user_notice=Ignoréiert Benotzer déi an de Redaxo Backend ageloggt sinn.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Stop benotzt Forum Spam
+yform_spam_protection_use_stop_forum_spam_label=Stop Forum Spam
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam ass e Service deen d'IP Adress vun der Ufro iwwerpréift. https://www.stopforumspam.com/
+

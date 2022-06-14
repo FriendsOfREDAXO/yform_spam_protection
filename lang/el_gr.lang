@@ -1,0 +1,35 @@
+yform_spam_protection_title=Κουμπιά Πολιτικής Απορρήτου
+yform_spam_protection_settings=Ρυθμίσεις
+yform_spam_protection_error_message=μήνυμα λάθους
+yform_spam_protection_error_notice=Μήνυμα σφάλματος που πρέπει να βγει η επικύρωση. Μπορεί να μεταφραστεί σε πολλές γλώσσες χρησιμοποιώντας το Addon Sprog ή το XOutputFilter.
+yform_spam_protection_checks=Δοκιμές (οι ρυθμίσεις δεν έχουν καμία επίδραση αυτή τη στιγμή)
+yform_spam_protection_timer=μετρών την ώραν
+yform_spam_protection_honeypot=δοχείο μελιού
+yform_spam_protection_block_ip_dyn=Δυναμικό μπλοκάρισμα IP
+yform_spam_protection_block_ip_dyn_notice=Εάν αποσταλούν πάρα πολλές φόρμες μέσω αυτής της διεύθυνσης IP, η IP θα αποκλειστεί για ορισμένο χρονικό διάστημα.
+yform_spam_protection_advanced_settings=Προηγμένες ρυθμίσεις
+yform_spam_protection_email=Διεύθυνση ηλεκτρονικού ταχυδρομείου (ακόμα ανενεργή)
+yform_spam_protection_email_notice=Διεύθυνση που θα ειδοποιηθεί για αυξημένο όγκο ανεπιθύμητων μηνυμάτων.
+yform_spam_protection_timer_1=χρονόμετρο συνεδρίας
+yform_spam_protection_timer_1_notice=Ελάχιστος αριθμός δευτερολέπτων που απαιτούνται για την επεξεργασία ή τη διόρθωση μιας φόρμας.
+yform_spam_protection_timer_2=Χρονοδιακόπτης φόρμας
+yform_spam_protection_timer_2_notice=Αριθμός δευτερολέπτων που πρέπει να περάσουν τουλάχιστον από την 1η κλήση μιας φόρμας.
+yform_spam_protection_timer_block_limit=Όριο αποκλεισμού IP
+yform_spam_protection_timer_block_limit_notice=Αριθμός που πρέπει να ξεπεραστεί στη χρονική θυρίδα αποκλεισμού IP, π.χ. <code>10</code> ανά χρονοθυρίδα
+yform_spam_protection_timer_block_limit_window=Παράθυρο χρόνου αποκλεισμού IP
+yform_spam_protection_timer_block_limit_window_notice=Σε δευτερόλεπτα κατά τα οποία πρέπει να ξεπεραστεί το όριο αιτήματος, π.χ. <code>600</code> για 10 λεπτά.
+yform_spam_protection_geoip=Κλείδωμα GeoIP
+yform_spam_protection_tld_block=Κλείδωμα IP
+yform_spam_protection_tld_list=τομείς ανώτατου επιπέδου
+yform_spam_protection_tld_list_notice=Τομείς ανώτατου επιπέδου στους οποίους δεν πρέπει να αποστέλλονται, π.χ. <code>.ru</code>
+yform_spam_protection_activate=Θέτω εις ενέργειαν
+yform_spam_protection_deactivate=Απενεργοποίηση
+yform_spam_protection_ip_whitelist=Λευκή λίστα IP
+yform_spam_protection_ip_whitelist_notice=Λίστα IP που δεν πρέπει να αποκλειστούν. Π.χ. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user=Αγνοήστε τους συνδεδεμένους χρήστες υποστήριξης
+yform_spam_protection_ignore_user_notice=Αγνοεί τους χρήστες που είναι συνδεδεμένοι στο backend του Redaxo.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Σταματήστε να χρησιμοποιείτε ανεπιθύμητα μηνύματα στο φόρουμ
+yform_spam_protection_use_stop_forum_spam_label=Διακοπή ανεπιθύμητων μηνυμάτων στο φόρουμ
+yform_spam_protection_use_stop_forum_spam_notice=Το Stop Forum Spam είναι μια υπηρεσία που ελέγχει τη διεύθυνση IP του αιτήματος. https://www.stopforumspam.com/
+

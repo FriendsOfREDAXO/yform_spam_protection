@@ -1,0 +1,35 @@
+yform_spam_protection_title=Tlačítka Zásady ochrany osobních údajů
+yform_spam_protection_settings=nastavení
+yform_spam_protection_error_message=chybové hlášení
+yform_spam_protection_error_notice=Chybová zpráva, že by se mělo objevit ověření. Lze přeložit do více jazyků pomocí Addon Sprog nebo XOutputFilter.
+yform_spam_protection_checks=Testy (nastavení nemá v tuto chvíli žádný vliv)
+yform_spam_protection_timer=časovač
+yform_spam_protection_honeypot=hrnec medu
+yform_spam_protection_block_ip_dyn=Dynamické blokování IP
+yform_spam_protection_block_ip_dyn_notice=Pokud je přes tuto IP adresu odesláno příliš mnoho formulářů, IP bude na určitou dobu zablokována.
+yform_spam_protection_advanced_settings=Pokročilé nastavení
+yform_spam_protection_email=E-mailová adresa (stále neaktivní)
+yform_spam_protection_email_notice=Adresa, která bude upozorněna na zvýšený objem spamu.
+yform_spam_protection_timer_1=časovač relace
+yform_spam_protection_timer_1_notice=Minimální počet sekund potřebný k úpravě nebo opravě formuláře.
+yform_spam_protection_timer_2=Časovač formuláře
+yform_spam_protection_timer_2_notice=Počet sekund, které musí uplynout alespoň od 1. volání formuláře.
+yform_spam_protection_timer_block_limit=Limit blokování IP
+yform_spam_protection_timer_block_limit_notice=Číslo, které musí být překročeno v časovém slotu blokování IP, např. <code>10</code> na časový slot
+yform_spam_protection_timer_block_limit_window=Časové okno blokování IP
+yform_spam_protection_timer_block_limit_window_notice=V sekundách, ve kterých musí být překročen limit požadavku, např. <code>600</code> po dobu 10 minut.
+yform_spam_protection_geoip=GeoIP zámek
+yform_spam_protection_tld_block=IP zámek
+yform_spam_protection_tld_list=domény nejvyšší úrovně
+yform_spam_protection_tld_list_notice=Domény nejvyšší úrovně, na které by se nemělo zasílat, např. <code>.ru</code>
+yform_spam_protection_activate=aktivovat
+yform_spam_protection_deactivate=Deaktivovat
+yform_spam_protection_ip_whitelist=Bílý seznam IP
+yform_spam_protection_ip_whitelist_notice=Seznam IP adres, které nemají být blokovány. Např. <code>192.168.0.1,192.168.0.2,192.168.0.3</code>
+yform_spam_protection_ignore_user=Ignorovat přihlášené uživatele backendu
+yform_spam_protection_ignore_user_notice=Ignoruje uživatele, kteří jsou přihlášeni k backendu Redaxo.
+
+yform_spam_protection_use_stop_forum_spam_cbx=Přestaňte používat spam na fóru
+yform_spam_protection_use_stop_forum_spam_label=Zastavte spam na fóru
+yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam je služba, která kontroluje IP adresu požadavku. https://www.stopforumspam.com/
+
