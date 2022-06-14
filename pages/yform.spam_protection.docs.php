@@ -1,6 +1,6 @@
 <?php
 
-echo rex_view::title('YForm Spamschutz');
+echo rex_view::title(rex_i18n::msg('yform_spam_protection_title'));
 
 $file = rex_file::get($this->getPath('README.md'));
 

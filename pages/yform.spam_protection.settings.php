@@ -1,110 +1,77 @@
 <?php
 
-echo rex_view::title(rex_i18n::msg('yform'));
+echo rex_view::title(rex_i18n::msg('yform_spam_protection_title'));
 
+if (rex_request::get('func', 'string') == "flush") {
+    spam_protection::release();
+    echo rex_view::info($this->i18n("flushed"));
+}
 
-if (rex::getUser()->isAdmin()) {
     $form = rex_config_form::factory($this->getProperty('package'));
 
-    $form->addFieldset($this->i18n('settings'));
+    $form->addFieldset($this->i18n('rules'));
 
-    // $field = $form->addTextField('warning');
-    // $field->setLabel($this->i18n('error_message'));
-    // $field->setNotice($this->i18n('error_notice'));
-    // $field->setAttribute('disabled', true);
+    $field = $form->addTextField('block_session_time');
+    $field->setLabel($this->i18n('block_session_time_label'));
+    $field->setNotice($this->i18n('block_session_time_notice'));
 
-    $form->addFieldset($this->i18n('checks'));
+    $field = $form->addTextField('block_form_time');
+    $field->setLabel($this->i18n('block_form_time_label'));
+    $field->setNotice($this->i18n('block_form_time_notice'));
 
-    // $field = $form->addSelectField('timer');
-    // $field->setLabel($this->i18n('timer'));
-    // $select = $field->getSelect();
-    // $select->setSize(1);
-    // $select->addOption($this->i18n('activate'), 1);
-    // $select->addOption($this->i18n('deactivate'), 0);
-    // $field->setAttribute('disabled', true);
+    $field = $form->addTextField('block_threshold_limit');
+    $field->setLabel($this->i18n('block_threshold_limit_label'));
+    $field->setNotice($this->i18n('block_threshold_limit_notice'));
 
-    // $field = $form->addSelectField('honeypot');
-    // $field->setLabel($this->i18n('honeypot'));
-    // $select = $field->getSelect();
-    // $select->setSize(1);
-    // $select->addOption($this->i18n('activate'), 1);
-    // $select->addOption($this->i18n('deactivate'), 0);
-    // $field->setAttribute('disabled', true);
+    $field = $form->addTextField('block_threshold_time');
+    $field->setLabel($this->i18n('block_threshold_time_label'));
+    $field->setNotice($this->i18n('block_threshold_time_notice'));
+    
+    $field = $form->addTextField('block_tlds');
+    $field->setLabel($this->i18n('block_tlds_label'));
+    $field->setNotice($this->i18n('block_tlds_notice'));
 
-    // $field = $form->addSelectField('ip_block');
-    // $field->setLabel($this->i18n('block_ip_dyn'));
-    // $field->setNotice($this->i18n('block_ip_dyn_notice'));
-    // $select = $field->getSelect();
-    // $select->setSize(1);
-    // $select->addOption($this->i18n('activate'), 1);
-    // $select->addOption($this->i18n('deactivate'), 0);
-    // $field->setAttribute('disabled', true);
+    $form->addFieldset($this->i18n('whitelist'));
 
-    $form->addFieldset($this->i18n('advanced_settings'));
+    $field = $form->addTextField('whitelist_ips');
+    $field->setLabel($this->i18n('whitelist_ips_label'));
+    $field->setNotice($this->i18n('whitelist_ips_notice'));
 
-    // $field = $form->addReadOnlyTextField('notification_email');
-    // $field->setLabel($this->i18n('email'));
-    // $field->setNotice($this->i18n('email_notice'));
-    // $field->setAttribute('disabled', true);
 
-    $field = $form->addTextField('timer_session');
-    $field->setLabel($this->i18n('timer_1'));
-    $field->setNotice($this->i18n('timer_1_notice'));
-
-    $field = $form->addTextField('timer_form');
-    $field->setLabel($this->i18n('timer_2'));
-    $field->setNotice($this->i18n('timer_2_notice'));
-
-    $field = $form->addTextField('ip_block_limit');
-    $field->setLabel($this->i18n('timer_block_limit'));
-    $field->setNotice($this->i18n('timer_block_limit_notice'));
-
-    $field = $form->addTextField('ip_block_timer');
-    $field->setLabel($this->i18n('timer_block_limit_window'));
-    $field->setNotice($this->i18n('timer_block_limit_window_notice'));
-	
-    $field = $form->addCheckboxField('use_stopforumspam');
-    $field->addOption($this->i18n('use_stop_forum_spam_cbx'), "1");
-    $field->setLabel($this->i18n('use_stop_forum_spam_label'));
-    $field->setNotice($this->i18n('use_stop_forum_spam_notice'));	
-	
-
-    // $field = $form->addSelectField('geo_block');
-    // $field->setLabel($this->i18n('geoip'));
-    // $select = $field->getSelect();
-    // $select->setSize(1);
-    // $select->addOption($this->i18n('activate'), 1);
-    // $select->addOption($this->i18n('deactivate'), 0);
-    // $field->setAttribute('disabled', true);
-
-    // $field = $form->addSelectField('tld_block');
-    // $field->setLabel($this->i18n('tld_block'));
-    // $select = $field->getSelect();
-    // $select->setSize(1);
-    // $select->addOption($this->i18n('activate'), 1);
-    // $select->addOption($this->i18n('deactivate'), 0);
-    // $field->setAttribute('disabled', true);
-
-    // $field = $form->addTextField('tld_list');
-    // $field->setLabel($this->i18n('tld_list'));
-    // $field->setNotice($this->i18n('tld_list_notice'));
-    // $field->setAttribute('disabled', true);
-
-    $field = $form->addTextField('ip_whitelist');
-    $field->setLabel($this->i18n('ip_whitelist'));
-    $field->setNotice($this->i18n('ip_whitelist_notice'));
-
-    $field = $form->addSelectField('ignore_user');
-    $field->setLabel($this->i18n('ignore_user'));
-    $field->setNotice($this->i18n('ignore_user_notice'));
+    $field = $form->addSelectField('whitelist_user');
+    $field->setLabel($this->i18n('whitelist_user_label'));
+    $field->setNotice($this->i18n('whitelist_user_notice'));
     $select = $field->getSelect();
     $select->setSize(1);
     $select->addOption($this->i18n('activate'), 1);
     $select->addOption($this->i18n('deactivate'), 0);
+
+    $field = $form->addSelectField('whitelist_ycom_user');
+    $field->setLabel($this->i18n('whitelist_ycom_user_label'));
+    $field->setNotice($this->i18n('whitelist_ycom_user_notice'));
+    $select = $field->getSelect();
+    $select->setSize(1);
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+
+    if (!rex_addon::get('ycom')->isInstalled()) {
+        $field->setAttribute('disabled', 'disabled');
+        $field->setNotice($this->i18n('whitelist_ycom_user_notice_disabled'));
+    }
+
+    $form->addFieldset($this->i18n('external_services'));
+
+    $field = $form->addSelectField('block_stopforumspam');
+    $field->setLabel($this->i18n('block_stopforumspam_label'));
+    $field->setNotice($this->i18n('block_stopforumspam_notice'));
+    $select = $field->getSelect();
+    $select->setSize(1);
+    $select->addOption($this->i18n('activate'), 1);
+    $select->addOption($this->i18n('deactivate'), 0);
+
 
     $fragment = new rex_fragment();
     $fragment->setVar('class', 'edit', false);
     $fragment->setVar('title', $this->i18n('title'), false);
     $fragment->setVar('body', $form->get(), false);
     echo $fragment->parse('core/page/section.php');
-}

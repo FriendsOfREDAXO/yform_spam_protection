@@ -32,4 +32,3 @@ yform_spam_protection_ignore_user_notice=Ignores users who are logged into the R
 yform_spam_protection_use_stop_forum_spam_cbx=Use "Stop Forum Spam"
 yform_spam_protection_use_stop_forum_spam_label=Stop Forum Spam
 yform_spam_protection_use_stop_forum_spam_notice=Stop Forum Spam is a service that checks the IP address of the request. https://www.stopforumspam.com/
-
