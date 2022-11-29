@@ -54,24 +54,6 @@ Wenn das Feld ausgefüllt wurde, deutet dies auf einen Spambot hin. Die Validier
 
 > Tipp: Die Umsetzung ist barrierefrei, da Autofill für dieses Feld deaktiviert wurde und dadurch sichergestellt ist, dass Screenreader oder unerfahrene Internetnutzer dieses Feld nicht versehentlich ausfüllen.
 
-### GeoIP-Sperre (geplant)
-
-Besucher-IP-Adressen, die nicht in den erwarteten Haupt- und Zielregionen liegen, sind mit hoher Wahrscheinlichkeit Spambots.
-
-> Hinweis: Es ist jedoch nicht auszuschließen, dass durch VPN-Verbindungen oder Besucher im Urlaub oder auf Geschäftsreise dadurch versehentlich ausgesperrt werden. Diese Option sollte nur in Ausnahmefällen aktiviert werden.
-
-### Top-Level-Domain-Sperre (geplant)
-
-Bei Formularen mit Eingabe der E-Mail-Adresse, bspw. einem Kontaktformular, können Absender gesperrt werden, deren Top-Level-Domain ungewöhnlich erscheinen.
-
-> Hinweis:  Es ist jedoch nicht auszuschließen, dass Kontakte im Ausland dadurch versehentlich ausgesperrt werden. Diese Option sollte nur in Ausnahmefällen aktiviert werden.
-
-### Sprach-Sperre (geplant)
-
-Bei Formularen mit Eingabe einer Nachricht, bspw. einem Kontaktformular, können Absender gesperrt werden, die sich in einer unerwartetten Sprache melden: Bspw. `englisch`, wenn die Firma nur eine deutschsprachige Website betreibt, oder `russisch`, obwohl die Website sich nicht an Besucher außerhalb der EU richtet. 
-
-> Hinweis:  Es ist jedoch nicht auszuschließen, dass Kontakte im Ausland dadurch versehentlich ausgesperrt werden. Diese Option sollte nur in Ausnahmefällen aktiviert werden.
-
 ## Einstellungen
 
 * Im REDAXO-Backend unter `YForm` > `Spamschutz` optional Einstellungen vornehmen.
@@ -82,6 +64,11 @@ Einige Einstellungen haben aktuell noch keine Funktion. Beteilige dich an der Um
 ## Tipps und Tricks
 
 Der 4. Parameter am Feld aktiviert den Debug-Modus
+
+
+```
+spam_protection|honeypot|Bitte nicht ausfüllen|Fehlermeldung|1
+```
 
 Bei mehreren Formularen auf einer Seite musst Du jedem Formular einen eindeutigen Namen mitgeben:
 
