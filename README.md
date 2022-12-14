@@ -92,4 +92,6 @@ Mögliche Ursache dafür ist, dass im Template beispielsweise `REX_ARTICLE[]` od
 
 ## Autor
 
-* [@alexplusde](https://github.com/sponsors/alexplusde) (Initiator)
+**Friends Of REDAXO**
+http://www.redaxo.org
+https://github.com/FriendsOfREDAXO
