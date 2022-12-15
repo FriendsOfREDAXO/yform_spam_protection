@@ -1,6 +1,6 @@
 package: yform_spam_protection
 version: '1.2.3'
-author: 'Friends Of REDAXO'
+author: 'Friends Of REDAXO, Lead: Alexander Walther'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 
 requires:
