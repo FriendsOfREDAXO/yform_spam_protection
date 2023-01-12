@@ -10,7 +10,13 @@
     <input id="<?= $this->getFieldId() ?>_js_enabled"
         name="<?= $this->getFieldId() ?>_js_enabled" type="hidden"
         value="0" readonly="readonly" tabindex="-1">
-    <style>
+    <style<?php
+
+    if (method_exists('rex_response','getNonce')) {
+        echo ' nonce="'.rex_response::getNonce().'"';
+    }
+
+    ?>>
         [id="<?= $this->getHTMLId() ?>"] {
  		position: absolute !important;
 		width: 1px !important;
@@ -23,7 +29,13 @@
 		border: 0 !important;
 	    }
     </style>
-    <script type="text/javascript">
+    <script type="text/javascript"<?php
+
+    if (method_exists('rex_response','getNonce')) {
+        echo ' nonce="'.rex_response::getNonce().'"';
+    }
+
+    ?>>
         var date = new Date();
         document.getElementById("<?= $this->getFieldId() ?>_js_enabled").value =
             date.getFullYear();
