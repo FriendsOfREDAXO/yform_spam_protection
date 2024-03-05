@@ -2,7 +2,7 @@ package: yform_spam_protection
 version: '1.2.4'
 author: 'Friends Of REDAXO, Lead: Alexander Walther'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
-
+perm: admin[]
 requires:
     redaxo: '^5.9'
     packages:
@@ -16,11 +16,11 @@ page:
 pages:
     yform/spam_protection:
         title: 'Spamschutz'
+        perm: admin[]
         subpages:
             settings:
                 title: 'Einstellungen'
             docs:
                 title: 'Dokumentation'
-
 default_config:
     timer: 5
