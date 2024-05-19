@@ -1,14 +1,14 @@
 package: yform_spam_protection
-version: '1.2.4'
+version: '1.2.5'
 author: 'Friends Of REDAXO, Lead: Alexander Walther'
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 perm: admin[]
 requires:
-    redaxo: '^5.9'
+    redaxo: '^5.17'
     packages:
-        yform: '>3'
+        yform: '^4'
     php:
-        version: '>=7.1'
+        version: '>=8.1'
 
 page:
     hidden: true
@@ -17,6 +17,7 @@ pages:
     yform/spam_protection:
         title: 'Spamschutz'
         perm: admin[]
+        icon: rex-icon fa-envelope-circle-check
         subpages:
             settings:
                 title: 'Einstellungen'
