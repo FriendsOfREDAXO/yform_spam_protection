@@ -24,4 +24,15 @@ pages:
             docs:
                 title: 'Dokumentation'
 default_config:
-    timer: 5
+    notification_email: ""
+    timer: 1
+    timer_session: 2
+    timer_form: 5
+    honeypot: 1
+    ip_block: 1
+    ip_block_limit: 10
+    ip_block_timer: 300
+    geo_block: 0
+    tld_block: 0
+    tld_list: ".ru"
+    warning: "Ihre Anfrage wurde als Spam erkannt und nicht zugestellt. Sollte dies irrtümlich passiert sein, wenden Sie sich bitte an den Betreiber der Website."
