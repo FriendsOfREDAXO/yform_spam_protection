@@ -2,8 +2,6 @@
 
 Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverlässig **Spam und Bots abzuwehren**. Die Einrichtung ist in **weniger als 5 Minuten** erledigt.
 
-![yform spam protectiopn](https://github.com/FriendsOfREDAXO/yform_spam_protection/assets/3855487/eb12295b-5fdb-41bc-a582-740e448330d8)
-
 ## Features
 
 * **Einfache Integration** - nur eine Zeile Code in das YForm-Formular einfügen.
