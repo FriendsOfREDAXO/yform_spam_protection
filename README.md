@@ -88,7 +88,7 @@ Mögliche Ursache dafür ist, dass im Template beispielsweise `REX_ARTICLE[]` od
 
 ## Lizenz
 
-[MIT Lizenz](LICENSE.md)
+[MIT Lizenz](LICENSE)
 
 ## Autor
 
