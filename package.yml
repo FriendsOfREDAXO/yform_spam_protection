@@ -1,6 +1,6 @@
 package: yform_spam_protection
 version: '1.2.6-dev'
-author: 'Friends Of REDAXO, Lead: Alexander Walther'
+author: Friends Of REDAXO
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 perm: admin[]
 requires:

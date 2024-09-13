@@ -88,8 +88,14 @@ Mögliche Ursache dafür ist, dass im Template beispielsweise `REX_ARTICLE[]` od
 
 ## Lizenz
 
-[MIT Lizenz](LICENSE.md)
+[MIT Lizenz](LICENSE)
 
 ## Autor
 
-* [@alexplusde](https://github.com/sponsors/alexplusde) (Initiator)
+**Friends Of REDAXO**
+http://www.redaxo.org
+https://github.com/FriendsOfREDAXO
+
+## Credits
+
+[@alexplusde](https://github.com/sponsors/alexplusde) (Initiator)
