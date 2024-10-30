@@ -1,6 +1,6 @@
 <div id="<?= $this->getHTMLId() ?>">
-    <label for="<?= $this->getFieldId() ?>"><?= $this->getLabel() ?></label>
-    <input id="<?= $this->getFieldId() ?>"
+    <label for="<?= $this->getFieldId() ?>" aria-hidden="true" role="none"><?= $this->getLabel() ?></label>
+    <input id="<?= $this->getFieldId() ?>" aria-hidden="true"
         name="<?= $this->getFieldId() ?>" type="email"
         autocomplete="off" tabindex="-1">
     <input id="<?= $this->getFieldId() ?>_microtime"
