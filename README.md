@@ -59,6 +59,16 @@ Wenn das Feld ausgefüllt wurde, deutet dies auf einen Spambot hin. Die Validier
 
 > Tipp: Die Umsetzung ist barrierefrei, da Autofill für dieses Feld deaktiviert wurde und dadurch sichergestellt ist, dass Screenreader oder unerfahrene Internetnutzer dieses Feld nicht versehentlich ausfüllen.
 
+### Validierung mit Badword-Filter
+Das AddOn liefert die Validierungs-Funktion `checkBadword()` mit, welche als Customfunction in einem Frontend-YForm-Formular aufgerufen werden kann. Die Validierung kann verkettet werden, um mehrere Badwords zu filtern.
+
+**PHP-Schreibweise**
+```php
+$yform->setValidateField('customfunction', ['email',"yform_spam_protection::checkBadword",['Eric Jones','No Mails from you, Eric.']]); // Feldname, Funktionsaufruf, Array: [Badword, Fehlermeldung]
+$yform->setValidateField('customfunction', ['email',"yform_spam_protection::checkBadword",['Bill Gates','No Mails from you, Bill.']]); // Feldname, Funktionsaufruf, Array: [Badword, Fehlermeldung]
+$yform->setValidateField('customfunction', ['msg',"yform_spam_protection::checkBadword",['bit.ly','Bitte keine <code>bit.ly</code>-Links anhängen.']]); // Feldname, Funktionsaufruf, Array: [Badword, Fehlermeldung]
+```
+
 ## Einstellungen
 
 * Im REDAXO-Backend unter `YForm` > `Spamschutz` optional Einstellungen vornehmen.
