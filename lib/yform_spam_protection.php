@@ -13,7 +13,7 @@ class yform_spam_protection
     {
         $badword = $params[0];
         $error_msg = $params[1];
-        $badword = strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $badword));
+        $badword = strtolower(preg_replace('/[^A-Za-z0-9]/', '', $badword));
         // Alle Felder überprüfen
         foreach ($yform->obj as $obj) {
             // Checken, ob Input-Name mit dem mitgegebenen übereinstimmt.
