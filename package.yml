@@ -1,5 +1,5 @@
 package: yform_spam_protection
-version: '1.2.6-dev'
+version: '1.2.6'
 author: Friends Of REDAXO
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 perm: admin[]
@@ -26,8 +26,8 @@ pages:
 default_config:
     notification_email: ""
     timer: 1
-    timer_session: 2
-    timer_form: 5
+    timer_session: 5
+    timer_form: 10
     honeypot: 1
     ip_block: 1
     ip_block_limit: 10
