@@ -12,8 +12,8 @@
         value="0" readonly="readonly" tabindex="-1">
     <style<?php
 
-    if (method_exists('rex_response','getNonce')) {
-        echo ' nonce="'.rex_response::getNonce().'"';
+    if (method_exists('rex_response', 'getNonce')) {
+        echo ' nonce="' . rex_response::getNonce() . '"';
     }
 
     ?>>
@@ -31,8 +31,8 @@
     </style>
     <script type="text/javascript"<?php
 
-    if (method_exists('rex_response','getNonce')) {
-        echo ' nonce="'.rex_response::getNonce().'"';
+    if (method_exists('rex_response', 'getNonce')) {
+        echo ' nonce="' . rex_response::getNonce() . '"';
     }
 
     ?>>
