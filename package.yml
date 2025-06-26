@@ -1,12 +1,12 @@
 package: yform_spam_protection
-version: '1.2.6'
+version: '1.3.0'
 author: Friends Of REDAXO
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 perm: admin[]
 requires:
     redaxo: '^5.17'
     packages:
-        yform: '^4'
+        yform: '>=4'
     php:
         version: '>=8.1'
 
