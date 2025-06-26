@@ -6,7 +6,7 @@ perm: admin[]
 requires:
     redaxo: '^5.17'
     packages:
-        yform: '^4'
+        yform: '>=4'
     php:
         version: '>=8.1'
 
