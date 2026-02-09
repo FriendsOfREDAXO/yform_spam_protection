@@ -1,5 +1,5 @@
 package: yform_spam_protection
-version: '1.3.0'
+version: '1.4.0'
 author: Friends Of REDAXO
 supportpage: https://github.com/friendsofredaxo/yform_spam_protection
 perm: admin[]
@@ -36,3 +36,4 @@ default_config:
     tld_block: 0
     tld_list: ".ru"
     warning: "Ihre Anfrage wurde als Spam erkannt und nicht zugestellt. Sollte dies irrtümlich passiert sein, wenden Sie sich bitte an den Betreiber der Website."
+    altcha_secret: ""
