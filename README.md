@@ -9,7 +9,7 @@ Das Addon `yform_spam_protection` kombiniert verschiedene Maßnahmen, um zuverl�
 * **Barrierefrei** – ohne Rechenaufgabe oder Bild-Captcha.
 * **DSGVO-konform** – sofern keine Konfiguration mit externen Anbietern gewählt wird.
 * **Mehrsprachig** - Die Fehlermeldung kann je Sprache durch Addons wie Sprog oder XOutputFilter angepasst werden.
-* **reCaptcha Plugin** - ermöglicht die Einbindung von google recaptcha
+* **Altcha** – datenschutzfreundliche CAPTCHA-Alternative auf Basis von Proof-of-Work, ohne externen Dienst.
 
 Weitere geplante Features unter [https://github.com/FriendsOfREDAXO/yform_spam_protection/issues](https://github.com/FriendsOfREDAXO/yform_spam_protection/issues)
 
@@ -58,6 +58,24 @@ Dem Formular wird ein per CSS für Menschen - jedoch nicht für Bots - ausgeblen
 Wenn das Feld ausgefüllt wurde, deutet dies auf einen Spambot hin. Die Validierung schlägt dann fehl.
 
 > Tipp: Die Umsetzung ist barrierefrei, da Autofill für dieses Feld deaktiviert wurde und dadurch sichergestellt ist, dass Screenreader oder unerfahrene Internetnutzer dieses Feld nicht versehentlich ausfüllen.
+
+### Altcha
+
+[Altcha](https://altcha.org) ist eine datenschutzfreundliche CAPTCHA-Alternative, die auf Proof-of-Work basiert. Es wird kein externer Dienst benötigt – die Verifizierung findet vollständig auf dem eigenen Server statt.
+
+Das Widget wird automatisch beim Laden der Seite gelöst und die Lösung beim Absenden serverseitig verifiziert. Ein Secret wird beim ersten Aufruf automatisch generiert und in der Addon-Config gespeichert.
+
+**PHP-Schreibweise**
+
+```php
+$yform->setValueField('altcha', ['altcha', 'Verifizierung fehlgeschlagen.']);
+```
+
+**Pipe-Schreibweise**
+
+```
+altcha|altcha|Verifizierung fehlgeschlagen.
+```
 
 ## Einstellungen
 

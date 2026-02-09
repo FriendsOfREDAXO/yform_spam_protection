@@ -1,4 +1,7 @@
 {
+  "require": {
+    "altcha-org/altcha": "^1.3"
+  },
   "require-dev": {
     "redaxo/php-cs-fixer-config": "^2.0",
     "friendsofphp/php-cs-fixer": "^3.14"
@@ -9,6 +12,12 @@
   },
   "scripts": {
     "cs-dry": "php-cs-fixer fix -v --ansi --dry-run --config=.php-cs-fixer.dist.php",
-    "cs-fix": "php-cs-fixer fix -v --ansi --config=.php-cs-fixer.dist.php"
+    "cs-fix": "php-cs-fixer fix -v --ansi --config=.php-cs-fixer.dist.php",
+    "post-install-cmd": [
+      "rm -rf vendor/composer && rm -f vendor/autoload.php"
+    ],
+    "post-update-cmd": [
+      "rm -rf vendor/composer && rm -f vendor/autoload.php"
+    ]
   }
 }

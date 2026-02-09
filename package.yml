@@ -36,3 +36,4 @@ default_config:
     tld_block: 0
     tld_list: ".ru"
     warning: "Ihre Anfrage wurde als Spam erkannt und nicht zugestellt. Sollte dies irrtümlich passiert sein, wenden Sie sich bitte an den Betreiber der Website."
+    altcha_secret: ""
